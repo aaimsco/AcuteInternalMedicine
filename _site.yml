@@ -17,10 +17,10 @@ navbar:
       href: about.html
     - text: "Publish"
       menu:
-        - text: "Publishing Articles"
-          href: publish_article.html
-        - text: "Publishing a Website"
-          href: publish_website.html
+        - text: "The Onslaught"
+          href: trialdistill2.html
+        - text: "Curvebender"
+          href: curvebenders.html
         - text: "---"
         - text: "Article Metadata"
           href: metadata.html
