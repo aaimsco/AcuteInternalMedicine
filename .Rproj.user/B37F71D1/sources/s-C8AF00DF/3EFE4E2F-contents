@@ -1,0 +1,216 @@
+---
+title: "How large was the force of onslaught of the pandemic in Malaysia in the beginning?"
+description: 
+  Infectiousness of the COVID-19 pandemic in Malaysia prior to intervention.
+author:
+  - name: Dr Saiful Safuan Md Sani 
+    url: https://saifulsafuan.com
+    affiliation: Advanced Acute Internal Medicine Society Malaysia & Department of Medicine Hospital Kuala Lumpur
+    affiliation_url: https://aaims.co
+date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+---
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+library(distill)
+library(googlesheets)
+library(gsheet)
+library(dplyr)
+library(incidence)
+library(ggplot2)
+library(EpiEstim)
+library(tidyr)
+library(lubridate)
+library(ggformula)
+```
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+url <- 'https://docs.google.com/spreadsheets/d/1jLn3UoJBfusBcEbLS8n8oPBJd6bUiA0WMqZ7LHNkdjw/edit?usp=sharing'
+data <- gsheet2tbl(url)
+data <- data %>% slice(3:nrow(data))
+```
+
+# $R_0$  
+
+How infectious was COVID-19 in Malaysia when it started? This can be measured by the basic reproduction number, $R_0$. The basic reproduction number ($R_0$) is [the reproduction number when there is no immunity from past exposures or vaccination, nor any deliberate intervention in disease transmission](https://www1.health.gov.au/internet/publications/publishing.nsf/Content/mathematical-models~mathematical-models-models.htm~mathematical-models-2.2.htm). Estimation of $R_0$ may be based on the exponential growth slope of an [epidemic curve](https://www.cdc.gov/foodsafety/outbreaks/investigating-outbreaks/epi-curves.html). To do so, we assume exponentially distributed [latent](https://arxiv.org/pdf/1705.01079.pdf) and infectious period of a SEIR model, and the following assumptions:  
+
+1. [latency estimate](https://www.cdc.gov/mmwr/volumes/69/wr/pdfs/mm6914e1-H.pdf): 3 days  
+
+2. [symptomatic viral shedding estimate](https://www.nature.com/articles/s41591-020-0869-5.pdf): 8 days  
+
+3. [serial interval estimate](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article): mean 3.96 days, SD 4.75 days.      
+
+Below is the epidemic curve for Malaysia:
+
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+counts_msia <- data.frame(data$dailynew, data$ImportCases)
+colnames(counts_msia) <- c("local", "imported")
+counts_msia <- as.matrix(counts_msia)
+
+incidmsia <- incidence(data$date)
+incidmsia$counts <- counts_msia
+mco <- data.frame(phase = c("MCO"),
+                   start = as.Date(c("2020-03-18")),
+                   end = as.Date(c("2020-05-04"))
+                 )
+```
+```{r fig.cap="Click on the chart to engage its interactive mode", out.extra="class=external"}
+library(plotly)
+library(viridis)
+library(RColorBrewer)
+p <- plot(incidmsia) + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  geom_rect(data=mco, inherit.aes=FALSE, aes(xmin=start, xmax=end, ymin=0,
+                ymax=250, fill = phase), col = "transparent",  alpha=0.3) +
+  labs(title = "Epidemic Curve", subtitle = "MCO - shaded area") +
+  scale_fill_manual(values=c("darkgrey", "darkred", "lightgrey"), name = "Key")
+ggplotly(p, kwargs=list(layout=list(hovermode='x')))
+```
+
+## Peak
+
+To identify the growth phase (and the decay phase of the curve), the peak of the curve must be identified. The peak occurred on 26th March 2020: 
+
+```{r fig.cap="Click on the chart to engage its interactive mode", out.extra="class=external"}
+counts_msia <- data.frame(data$dailynew)
+colnames(counts_msia) <- c("local")
+counts_msia <- as.matrix(counts_msia)
+incidmsia2 <- incidence(data$date)
+incidmsia2$counts <- counts_msia
+incidmsia_peak <- find_peak(incidmsia2)
+
+p1b <- plot(incidmsia2) + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  geom_rect(data=mco, inherit.aes=FALSE, aes(xmin=start, xmax=end, ymin=0,
+                ymax=250, fill = phase), col = "transparent",  alpha=0.3) +
+  geom_vline(col = "steelblue", lty = 2, aes(xintercept = as.numeric(incidmsia_peak), text = paste(incidmsia_peak))) + 
+  labs(title = "Epidemic Curve", subtitle = "MCO - shaded area") +
+  scale_fill_manual(values=c("darkred", "lightgrey", "steelblue"), name = "Key")
+p1c <- ggplotly(p1b, kwargs=list(layout=list(hovermode='x', autosize = F, width = 766, height = 500, margin = m)))
+p1c$x$data[[3]]$text <- "Peak: 2020-03-26"
+p1c
+```
+
+## Growth & decay
+
+The graph below illustrates the growth and decay phase of the curve:
+
+```{r}
+incidmsia2[["counts"]] <- as.matrix(as.integer(incidmsia2[["counts"]]))
+incidmsia_fit <- incidence::fit(incidmsia2, 
+    split = incidmsia_peak)
+
+dfgf <- incidmsia_fit[["before"]][["info"]][["pred"]][["fit"]]
+dfgf[25:nrow(data)] <- NA
+
+dfgl <- incidmsia_fit[["before"]][["info"]][["pred"]][["lwr"]]
+dfgl[25:nrow(data)] <- NA
+
+dfgu <- incidmsia_fit[["before"]][["info"]][["pred"]][["upr"]]
+dfgu[25:nrow(data)] <- NA
+
+dfdf <- as.numeric()
+dfdf[24:nrow(data)] <- incidmsia_fit[["after"]][["info"]][["pred"]][["fit"]]
+
+dfdu <- as.numeric()
+dfdu[24:nrow(data)] <- incidmsia_fit[["after"]][["info"]][["pred"]][["upr"]]
+
+dfdl <- as.numeric()
+dfdl[24:nrow(data)] <- incidmsia_fit[["after"]][["info"]][["pred"]][["lwr"]]
+```
+
+```{r fig.cap="Click on the chart to engage its interactive mode", out.extra="class=external"}
+fig <- plot_ly(data, x = ~date, y = ~dailynew, type = 'bar', name = 'Incidence')
+fig %>% 
+  add_trace(y = dfgf, type = "scatter", mode = "lines", name = 'Growth - Fit') %>% 
+  add_trace(y = dfdf, type = "scatter", mode = "lines", name = 'Decay - Fit') %>% 
+  add_trace(y = dfgu, type = "scatter", mode = "lines", line = list(color = 'transparent'),
+        showlegend = FALSE, name = 'Growth - Upper limit') %>% 
+  add_trace(y = dfgl, type = "scatter", mode = "lines", line = list(color = 'transparent'),
+        showlegend = FALSE, fill = 'tonexty', fillcolor='rgba(239, 112, 21,0.4)', name = 'Growth - Lower limit') %>% 
+  add_trace(y = dfdu, type = "scatter", mode = "lines", line = list(color = 'transparent'),
+        showlegend = FALSE, name = 'Growth - Upper limit') %>% 
+  add_trace(y = dfdl, type = "scatter", mode = "lines", line = list(color = 'transparent'),
+        showlegend = FALSE, fill = 'tonexty', fillcolor='rgba(0,100,80,0.4)', name = 'Growth - Lower limit')
+```
+
+## Estimates of $R_0$
+
+### $R_0$ from regression slope
+
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+logdata2 <- log(data$dailynew[1:21])
+Time <- data$date[1:21]
+model <- lm(logdata2 ~ Time)
+summary(model)
+```
+
+```{r, fig.cap="Click on the chart to engage its interactive mode", out.extra="class=external", message=FALSE, echo=FALSE, warning=FALSE}
+model_predict <- cbind.data.frame(logdata2, Time, predict(model, interval = 'confidence'))
+
+# plot the points (actual observations), regression line, and confidence interval
+p2 <- ggplot(model_predict, aes(Time,logdata2))
+p2 <- p2 + geom_point()
+p2 <- p2 + geom_line(aes(Time, fit), col = "steelblue")
+p2 <- p2 + geom_ribbon(aes(ymin=lwr,ymax=upr), alpha=0.3) +
+  labs(y = "Log(Daily incidence)")
+ggplotly(p2)
+```
+
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+lat=3 #mean latency period; dys
+inf=8 #mean infectious period; dys
+b1=1/lat
+b2=1/inf
+r_model=summary.lm(model)$coefficients[2,1]
+sterr_model=summary.lm(model)$coefficients[2,2]
+ Rexp=(1+(r_model*lat))*(1+(r_model*inf)) 
+ Rexp_lower=(1+((r_model-1.96*sterr_model)*lat))*(1+((r_model-1.96*sterr_model)*inf))
+ Rexp_upper=(1+((r_model+1.96*sterr_model)*lat))*(1+((r_model+1.96*sterr_model)*inf)) 
+paste0(round(Rexp,1), " [95% CI: ", round(Rexp_lower, 1), ", ", round(Rexp_upper, 1), "]")
+```
+
+This mean value of $R_0$ was modelled based on the exponential growth phase of the epidemic curve for the period 2020-03-03 to 2020-03-23. In comparison, the official declared value was 3.5, which was based on contact tracing averaging. It appears that empirical individual patient data is consistent with population level data; however, we will confirm it with further assessment.
+
+### $R_0$ from earlyR package  
+
+A Bayesian framework for estimating $R_0$ using population level data is available with the EpiEstim R package. The package has been later supplemented with a simpler version, the earlyR R package. Below are the $R_0$ estimates of that Bayesian model.
+
+```{r warning=FALSE, message=FALSE, results='hide'}
+library(earlyR)
+# http://www.repidemicsconsortium.org/earlyR/articles/earlyR.html  
+
+counts_msia_trunc <- data.frame(data$dailynew[12:15])
+colnames(counts_msia_trunc) <- c("local")
+counts_msia_trunc <- as.matrix(counts_msia_trunc)
+
+incidmsia <- incidence(data$date[12:15])
+incidmsia$counts <- counts_msia_trunc
+
+res <- get_R(incidmsia, si_mean = 3.96, si_sd = 4.75)
+# serial interval assumptions: [Zhanwei et al (2020)](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article)
+pres <- plot(res, frame.plot=FALSE)
+pres
+```
+
+#### $R_0$ 95% CI
+
+```{r}
+set.seed(6472)
+R_val <- sample_R(res, 1000)
+summary(R_val)
+quantile(R_val, c(0.025, 0.975))
+hist(R_val, border = "grey", col = "navy",
+     xlab = "Values of R",
+     main = "Sample of likely R values")
+```
+
+Resampling reveals a mean $R_0$ 3.33 [95% CI: 3.08-3.60].
+
+In perspective, one [systematic review](https://www.jpmph.org/journal/view.php?doi=10.3961/jpmph.20.076) estimated a pooled $R_0$ at 3.32 [95% CI: 2.81-3.82].
+
+## Source code {.appendix}
+
+Available at <https://github.com/aaimsco/rpubs>

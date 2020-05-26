@@ -1,0 +1,134 @@
+---
+title: "Are We Good ***Curve-benders***?"
+description: |
+  This article explores the epidemic control measures in Malaysia.
+author:
+  - name: Dr Saiful Safuan Md Sani 
+    url: https://saifulsafuan.com
+    affiliation: Advanced Acute Internal Medicine Society Malaysia & Department of Medicine Hospital Kuala Lumpur
+    affiliation_url: https://aaims.co
+date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+---
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+library(knitr)
+library(distill)
+library(googlesheets)
+library(gsheet)
+library(dplyr)
+library(incidence)
+library(ggplot2)
+library(plotly)
+library(EpiEstim)
+library(earlyR)
+library(tidyr)
+library(lubridate)
+library(ggformula)
+```
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+url <- 'https://docs.google.com/spreadsheets/d/1jLn3UoJBfusBcEbLS8n8oPBJd6bUiA0WMqZ7LHNkdjw/edit?usp=sharing'
+data <- gsheet2tbl(url)
+data <- data %>% slice(3:nrow(data))
+```
+
+Have we handled the pandemic well in Malaysia? In other words, have we managed to bend the epidemic curve away from its natural trajectory? If so, are we good curve-benders? 
+
+```{r, fig.cap="Click on the chart to engage its interactive mode. *RED* projected natural trajectory, *BLUE* smoothened epidemic curve, *BLACK DASHED* actual epidemic curve. Smoothened epidemic curve contains incidence in log values.", out.extra="class=external"}
+counts_msia_trunc <- data.frame(data$dailynew[12:15])
+colnames(counts_msia_trunc) <- c("local")
+counts_msia_trunc <- as.matrix(counts_msia_trunc)
+incidmsia <- incidence(data$date[12:15])
+incidmsia$counts <- counts_msia_trunc
+
+res <- get_R(incidmsia, si_mean = 3.96, si_sd = 4.75)
+R_val <- sample_R(res, 1000)
+
+library(projections)
+set.seed(6472)
+future_i <- project(incidmsia, R = R_val, n_sim = 1000, si = res$si, n_days = 45) 
+# serial interval assumptions: [Zhanwei et al (2020)](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article)
+fut <- plot(future_i)
+futu <- fut[["layers"]][[2]][["data"]] %>% filter(quantile == "50%") # from 2020-03-18
+
+counts_msia <- data.frame(data$dailynew)
+colnames(counts_msia) <- c("local")
+counts_msia <- as.matrix(counts_msia)
+incidmsia2 <- incidence(data$date)
+incidmsia2$counts <- counts_msia
+incidmsia2[["counts"]] <- as.matrix(as.integer(incidmsia2[["counts"]]))
+
+library(scales)
+dattoproj <- data.frame(incidmsia2$dates, incidmsia2$counts)
+dattoproj <- dattoproj[1:83,]
+p1 <- ggplot(dattoproj, aes(x=incidmsia2.dates, y=incidmsia2.counts)) + 
+  geom_line(col = "#2C3539", linetype = "dotted") +
+  geom_spline(col = "steelblue", nknots = 30) + 
+  geom_line(data=futu, aes(x=dates, y = value), col = "tomato") + 
+  scale_y_continuous(trans = "log",labels = scales::number_format(accuracy = 1)) +
+  labs(y = "Incidence (log scale y-axis)", x = "Date") 
+ggplotly(p1)
+```
+
+The chart above confirms that we are curve-benders! The actual curve has separated from the projected natural trajectory by a large margin. All well and good, but we need to assess how good the curve-bending has been. For that, we need to gage the daily effective reproduction numbers. 
+
+<img src="https://static.rogerebert.com/uploads/review/primary_image/reviews/the-last-airbender-2010/EB20100630REVIEWS100639999AR.jpg"
+     alt="try saya"
+     width="100%"
+     style="float: left; margin-right: 10px;"/>
+<figcaption>Source: https://www.rogerebert.com/reviews/the-last-airbender-2010</figcaption>
+
+# Daily $R_e$
+
+[$R_e$](https://www.cebm.net/covid-19/when-will-it-be-over-an-introduction-to-viral-reproduction-numbers-r0-and-re/) is the reproduction number calculated at different time points during the epidemic, i.e. the average number of expected infected persons by a primary case in a population of susceptibles and infected individuals.  
+
+The estimation of $R_e$ requires knowing the [serial interval](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article). The serial interval is the time elapsed between the symptom onset of the primary case and the date of symptom onset of the secondary case. Here we used the estimated serial interval by Zhanwei et al (2020), with a mean of 3.96 days and a standard deviation 4.75 days (Zhanwei et al 2020). In this analyses, $R_e$ was estimated in a sliding window of 7-days. The method applied here is based on Wallinga and Teunis (2004).
+Estimates of $R_e$ were carried out in R v3.6.2, R-package EpiEstim v2.2-1. The code for plotting and calculating $R_e$ based on Churches (2020).
+
+The model was also adjusted for uncertainty in the serial interval assumption.  
+
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+## we choose to draw:
+## - the mean of the SI in a Normal(3.96, 1), truncated at 1 and 21
+## - the sd of the SI in a Normal(4.75, 0.5), truncated at 0.5 and 7.5
+config <- make_config(list(mean_si = 3.96, std_mean_si = 0.5,
+                           min_mean_si = 3.5, max_mean_si = 4.5,
+                           std_si = 4.75, std_std_si = 0.5,
+                           min_std_si = 4.5, max_std_si = 5.1))
+# https://drive.google.com/file/d/1HQex9HFdNy883zTiUEywsBiFEb_orr2t/view   
+
+res_uncertain_si <- estimate_R(data$dailynew,
+                               method = "uncertain_si",
+                               config = config)
+#> Default config will estimate R on weekly sliding windows.
+#>     To change this change the t_start and t_end arguments.
+```
+
+```{r, fig.cap="Click on the chart to engage its interactive mode. *Ribbon* 95% CI of the mean $R_e$.", out.extra="class=external",  fig.width=8, fig.height=4, message=FALSE, echo=FALSE, warning=FALSE}
+dfp55 <- data.frame(res_uncertain_si$R)
+dfp55$time <- data$date[8:length(data$date)]
+#str(dfp55)
+
+p55 <- ggplot(dfp55, aes(time,Mean.R.))
+p55<- p55+ geom_line(col = "steelblue")
+p55<- p55+ geom_ribbon(aes(ymin=Quantile.0.025.R.,ymax=Quantile.0.975.R.), alpha=0.3, fill = "steelblue") +
+  labs(y = "R", x = "Time", title = "Daily Effective Reproduction Number")
+ggplotly(p55) %>%
+  layout(title = list(text = paste0('Daily Effective Reproduction Number',
+                                    '<br>',
+                                    '<sup>',
+                                    'SI adjusted for uncertainty',
+                                    '</sup>')))
+```
+
+It appears that by March 22, four days after the commencement of the Movement Control Order instituted by the Government of Malaysia, the mean $R_e$ was down to 1.26, a remarkable drop from the peak mean $R_e$ of 3.09 on March 15.
+
+However, the latter part of the $R_e$ curve has risen to more than 1 since May 23. While this rise may well be due to increased positive screens among foreigners held at a few immigration holding facilities throughout the country for various immigration offences; this is in turn part of the more proactive effort in case-finding by the Ministry of Health of Malaysia. Malaysians must not be complacent. 
+
+## Source code {.appendix}
+
+Available at https://github.com/aaimsco/rpubs
+

@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+  <!--radix_placeholder_meta_tags-->
+  <title>COVID-19 in Malaysia: Are We Good ***Curve-benders***?</title>
+
+  <meta property="description" itemprop="description" content="This article explores the epidemic control measures in Malaysia."/>
+
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2020-05-27"/>
+  <meta property="article:created" itemprop="dateCreated" content="2020-05-27"/>
+  <meta name="article:author" content="Dr Saiful Safuan Md Sani"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="COVID-19 in Malaysia: Are We Good ***Curve-benders***?"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="This article explores the epidemic control measures in Malaysia."/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="COVID-19 in Malaysia"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="COVID-19 in Malaysia: Are We Good ***Curve-benders***?"/>
+  <meta property="twitter:description" content="This article explores the epidemic control measures in Malaysia."/>
+  <meta property="twitter:site" content="@dcicantab51"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Are We Good ***Curve-benders***?"]},{"type":"character","attributes":{},"value":["This article explores the epidemic control measures in Malaysia.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Dr Saiful Safuan Md Sani"]},{"type":"character","attributes":{},"value":["https://saifulsafuan.com"]},{"type":"character","attributes":{},"value":["Advanced Acute Internal Medicine Society Malaysia & Department of Medicine Hospital Kuala Lumpur"]},{"type":"character","attributes":{},"value":["https://aaims.co"]}]}]},{"type":"character","attributes":{},"value":["2020-05-27"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  <!--radix_placeholder_navigation_in_header-->
+
+  <script type="application/javascript">
+
+    window.headroom_prevent_pin = false;
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+
+  /* Theme (user-documented overrideables for nav appearance) */
+
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #455a64;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: white;
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .distill-site-header {
+
+  }
+
+  .distill-site-footer {
+
+  }
+
+
+  /* Site Header */
+
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+
+
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+
+  .distill-site-header .title {
+    font-size: 18px;
+  }
+
+  .distill-site-header .logo {
+    padding: 0;
+  }
+
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+
+
+
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+
+
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative;}
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Site Footer */
+
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Headroom */
+
+  d-title {
+    padding-top: 6rem;
+  }
+
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .headroom--unpinned {
+    top: -100px;
+  }
+
+  .headroom--pinned {
+    top: 0;
+  }
+
+  </style>
+
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for table of contents */
+
+  .d-toc {
+    color: rgba(0,0,0,0.8);
+    font-size: 0.8em;
+    line-height: 1em;
+  }
+
+  .d-toc-header {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 1.3em;
+  }
+
+  .d-toc a {
+    border-bottom: none;
+  }
+
+  .d-toc ul {
+    padding-left: 0;
+  }
+
+  .d-toc li>ul {
+    padding-top: 0.8em;
+    padding-left: 16px;
+    margin-bottom: 0.6em;
+  }
+
+  .d-toc ul,
+  .d-toc li {
+    list-style-type: none;
+  }
+
+  .d-toc li {
+    margin-bottom: 0.9em;
+  }
+
+  .d-toc-separator {
+    margin-top: 20px;
+    margin-bottom: 2em;
+  }
+
+  .d-article-with-toc {
+    border-top: none;
+    padding-top: 0;
+  }
+
+
+
+  /* Tweak code blocks (note that this CSS is repeated above in an injection
+     into the d-code shadow dom) */
+
+  d-code {
+    overflow-x: auto !important;
+  }
+
+  pre.d-code code.d-code {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  pre.text-output {
+
+    font-size: 12px;
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  @media(min-width: 768px) {
+
+  d-code {
+    overflow-x: visible !important;
+  }
+
+  pre.d-code code.d-code  {
+      padding-left: 18px;
+      font-size: 14px;
+  }
+  pre.text-output {
+    font-size: 14px;
+  }
+  }
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // create d-bibliography
+    var bibliography = $('<d-bibliography></d-bibliography>');
+    $('#distill-bibliography').wrap(bibliography);
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace citations with <d-cite>
+    $('.citation').each(function(i, val) {
+      appendix = true;
+      var cites = $(this).attr('data-cites').split(" ");
+      var dt_cite = $('<d-cite></d-cite>');
+      dt_cite.attr('key', cites.join());
+      $(this).replaceWith(dt_cite);
+    });
+    // remove refs
+    $('#refs').remove();
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-toc a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // replace code blocks with d-code
+    $('pre>code').each(function(i, val) {
+      var code = $(this);
+      var pre = code.parent();
+      var clz = "";
+      var language = pre.attr('class');
+      if (language) {
+        // map unknown languages to "clike" (without this they just dissapear)
+        if ($.inArray(language, ["bash", "clike", "css", "go", "html",
+                                 "javascript", "js", "julia", "lua", "markdown",
+                                 "markup", "mathml", "python", "svg", "xml"]) == -1)
+          language = "clike";
+        language = ' language="' + language + '"';
+        var dt_code = $('<d-code block' + language + clz + '></d-code>');
+        dt_code.text(code.text());
+        pre.replaceWith(dt_code);
+      } else {
+        code.addClass('text-output').unwrap().changeElementType('pre');
+      }
+    });
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('d-code, pre.text-output, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // table of contents
+      if (have_authors) // adjust border if we are in authors
+        $('.d-toc').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // inject pre code styles (can't do this with a global stylesheet b/c a shadow root is used)
+      $('d-code').each(function(i, val) {
+        var style = document.createElement('style');
+        style.innerHTML = 'pre code { padding-left: 10px; font-size: 12px; border-left: 2px solid rgba(0,0,0,0.1); } ' +
+                          '@media(min-width: 768px) { pre code { padding-left: 18px; font-size: 14px; } }';
+        if (this.shadowRoot)
+          this.shadowRoot.appendChild(style);
+      });
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-toc-header').remove();
+    $('.d-toc').remove();
+    $('.d-toc-separator').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="site_libs/elevate-section-attrs-2.0/elevate-section-attrs.js"></script>
+  <script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+  <script src="site_libs/plotly-binding-4.9.2.1/plotly.js"></script>
+  <script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+  <link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+  <script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+  <link href="site_libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+  <script src="site_libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98890761-11"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-98890761-11');
+  </script>
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Are We Good ***Curve-benders***?","description":"This article explores the epidemic control measures in Malaysia.","authors":[{"author":"Dr Saiful Safuan Md Sani","authorURL":"https://saifulsafuan.com","affiliation":"Advanced Acute Internal Medicine Society Malaysia & Department of Medicine Hospital Kuala Lumpur","affiliationURL":"https://aaims.co"}],"publishedDate":"2020-05-27T00:00:00.000+08:00","citationText":"Sani, 2020"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">COVID-19 in Malaysia</a>
+</div>
+<div class="nav-right">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Publish
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="publish_article.html">Publishing Articles</a>
+<a href="publish_website.html">Publishing a Website</a>
+<hr/>
+<a href="metadata.html">Article Metadata</a>
+</div>
+</div>
+<a href="https://github.com/aaimsco/rpubs">
+<i class="fab fa-github"></i>
+</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Are We Good Curve-benders?</h1>
+<p><p>This article explores the epidemic control measures in Malaysia.</p></p>
+</div>
+
+<div class="d-byline">
+  Dr Saiful Safuan Md Sani <a href="https://saifulsafuan.com" class="uri">https://saifulsafuan.com</a> (Advanced Acute Internal Medicine Society Malaysia &amp; Department of Medicine Hospital Kuala Lumpur)<a href="https://aaims.co" class="uri">https://aaims.co</a>
+  
+<br/>2020-05-27
+</div>
+
+<div class="d-article">
+<h3 class="d-toc-header">Table of Contents</h3>
+<nav class="d-toc" id="TOC">
+<ul>
+<li><a href="#daily-r_e">Daily <span class="math inline">\(R_e\)</span></a>
+<ul>
+<li><a href="#source-code">Source code</a></li>
+</ul></li>
+</ul>
+</nav>
+<hr class="d-toc-separator"/>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Have we handled the pandemic well in Malaysia? In other words, have we managed to bend the epidemic curve away from its natural trajectory? If so, are we good curve-benders?</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:unnamed-chunk-3"></span>
+<div id="htmlwidget-724aff3411dcf335706b" style="width:624px;height:384px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-724aff3411dcf335706b">{"x":{"data":[{"x":[18324,18325,18326,18327,18328,18329,18330,18331,18332,18333,18334,18335,18336,18337,18338,18339,18340,18341,18342,18343,18344,18345,18346,18347,18348,18349,18350,18351,18352,18353,18354,18355,18356,18357,18358,18359,18360,18361,18362,18363,18364,18365,18366,18367,18368,18369,18370,18371,18372,18373,18374,18375,18376,18377,18378,18379,18380,18381,18382,18383,18384,18385,18386,18387,18388,18389,18390,18391,18392,18393,18394,18395,18396,18397,18398,18399,18400,18401,18402,18403,18404,18405,18406],"y":[1.94591014905531,2.63905732961526,1.6094379124341,3.3322045101752,2.30258509299405,1.79175946922805,2.89037175789616,2.484906649788,2.99573227355399,2.19722457733622,3.66356164612965,3.71357206670431,5.24702407216049,4.8283137373023,4.78749174278205,4.76217393479776,4.70048036579242,4.86753445045558,5.03043792139244,4.81218435537242,5.35658627467201,4.66343909411207,5.14749447681345,5.45958551414416,4.86753445045558,5.06890420222023,5.01063529409626,5.04985600724954,4.9416424226093,4.95582705760126,5.33753807970132,5.37989735354046,5.01063529409626,5.18738580584075,4.87519732320115,5.13579843705026,5.04985600724954,4.69134788222914,4.77068462446567,5.21493575760899,5.03043792139244,4.89783979995091,5.13579843705026,4.44265125649032,4.70048036579242,4.23410650459726,3.98898404656427,4.43081679884331,3.58351893845611,4.04305126783455,3.91202300542815,4.26267987704132,4.47733681447821,3.93182563272433,3.63758615972639,3.68887945411394,3.43398720448515,3.09104245335832,3.46573590279973,4.04305126783455,4.54329478227,4.24849524204936,3.87120101090789,3.40119738166216,3.78418963391826,3.63758615972639,4.15888308335967,3.97029191355212,4.20469261939097,4.04305126783455,2.56494935746154,3.49650756146648,3.68887945411394,3.58351893845611,2.39789527279837,2.83321334405622,3.25809653802148,3.55534806148941,3.04452243772342,3.85014760171006,3.97029191355212,3.78418963391826,3.97029191355212],"text":["incidmsia2.dates: 2020-03-03<br />incidmsia2.counts:   7","incidmsia2.dates: 2020-03-04<br />incidmsia2.counts:  14","incidmsia2.dates: 2020-03-05<br />incidmsia2.counts:   5","incidmsia2.dates: 2020-03-06<br />incidmsia2.counts:  28","incidmsia2.dates: 2020-03-07<br />incidmsia2.counts:  10","incidmsia2.dates: 2020-03-08<br />incidmsia2.counts:   6","incidmsia2.dates: 2020-03-09<br />incidmsia2.counts:  18","incidmsia2.dates: 2020-03-10<br />incidmsia2.counts:  12","incidmsia2.dates: 2020-03-11<br />incidmsia2.counts:  20","incidmsia2.dates: 2020-03-12<br />incidmsia2.counts:   9","incidmsia2.dates: 2020-03-13<br />incidmsia2.counts:  39","incidmsia2.dates: 2020-03-14<br />incidmsia2.counts:  41","incidmsia2.dates: 2020-03-15<br />incidmsia2.counts: 190","incidmsia2.dates: 2020-03-16<br />incidmsia2.counts: 125","incidmsia2.dates: 2020-03-17<br />incidmsia2.counts: 120","incidmsia2.dates: 2020-03-18<br />incidmsia2.counts: 117","incidmsia2.dates: 2020-03-19<br />incidmsia2.counts: 110","incidmsia2.dates: 2020-03-20<br />incidmsia2.counts: 130","incidmsia2.dates: 2020-03-21<br />incidmsia2.counts: 153","incidmsia2.dates: 2020-03-22<br />incidmsia2.counts: 123","incidmsia2.dates: 2020-03-23<br />incidmsia2.counts: 212","incidmsia2.dates: 2020-03-24<br />incidmsia2.counts: 106","incidmsia2.dates: 2020-03-25<br />incidmsia2.counts: 172","incidmsia2.dates: 2020-03-26<br />incidmsia2.counts: 235","incidmsia2.dates: 2020-03-27<br />incidmsia2.counts: 130","incidmsia2.dates: 2020-03-28<br />incidmsia2.counts: 159","incidmsia2.dates: 2020-03-29<br />incidmsia2.counts: 150","incidmsia2.dates: 2020-03-30<br />incidmsia2.counts: 156","incidmsia2.dates: 2020-03-31<br />incidmsia2.counts: 140","incidmsia2.dates: 2020-04-01<br />incidmsia2.counts: 142","incidmsia2.dates: 2020-04-02<br />incidmsia2.counts: 208","incidmsia2.dates: 2020-04-03<br />incidmsia2.counts: 217","incidmsia2.dates: 2020-04-04<br />incidmsia2.counts: 150","incidmsia2.dates: 2020-04-05<br />incidmsia2.counts: 179","incidmsia2.dates: 2020-04-06<br />incidmsia2.counts: 131","incidmsia2.dates: 2020-04-07<br />incidmsia2.counts: 170","incidmsia2.dates: 2020-04-08<br />incidmsia2.counts: 156","incidmsia2.dates: 2020-04-09<br />incidmsia2.counts: 109","incidmsia2.dates: 2020-04-10<br />incidmsia2.counts: 118","incidmsia2.dates: 2020-04-11<br />incidmsia2.counts: 184","incidmsia2.dates: 2020-04-12<br />incidmsia2.counts: 153","incidmsia2.dates: 2020-04-13<br />incidmsia2.counts: 134","incidmsia2.dates: 2020-04-14<br />incidmsia2.counts: 170","incidmsia2.dates: 2020-04-15<br />incidmsia2.counts:  85","incidmsia2.dates: 2020-04-16<br />incidmsia2.counts: 110","incidmsia2.dates: 2020-04-17<br />incidmsia2.counts:  69","incidmsia2.dates: 2020-04-18<br />incidmsia2.counts:  54","incidmsia2.dates: 2020-04-19<br />incidmsia2.counts:  84","incidmsia2.dates: 2020-04-20<br />incidmsia2.counts:  36","incidmsia2.dates: 2020-04-21<br />incidmsia2.counts:  57","incidmsia2.dates: 2020-04-22<br />incidmsia2.counts:  50","incidmsia2.dates: 2020-04-23<br />incidmsia2.counts:  71","incidmsia2.dates: 2020-04-24<br />incidmsia2.counts:  88","incidmsia2.dates: 2020-04-25<br />incidmsia2.counts:  51","incidmsia2.dates: 2020-04-26<br />incidmsia2.counts:  38","incidmsia2.dates: 2020-04-27<br />incidmsia2.counts:  40","incidmsia2.dates: 2020-04-28<br />incidmsia2.counts:  31","incidmsia2.dates: 2020-04-29<br />incidmsia2.counts:  22","incidmsia2.dates: 2020-04-30<br />incidmsia2.counts:  32","incidmsia2.dates: 2020-05-01<br />incidmsia2.counts:  57","incidmsia2.dates: 2020-05-02<br />incidmsia2.counts:  94","incidmsia2.dates: 2020-05-03<br />incidmsia2.counts:  70","incidmsia2.dates: 2020-05-04<br />incidmsia2.counts:  48","incidmsia2.dates: 2020-05-05<br />incidmsia2.counts:  30","incidmsia2.dates: 2020-05-06<br />incidmsia2.counts:  44","incidmsia2.dates: 2020-05-07<br />incidmsia2.counts:  38","incidmsia2.dates: 2020-05-08<br />incidmsia2.counts:  64","incidmsia2.dates: 2020-05-09<br />incidmsia2.counts:  53","incidmsia2.dates: 2020-05-10<br />incidmsia2.counts:  67","incidmsia2.dates: 2020-05-11<br />incidmsia2.counts:  57","incidmsia2.dates: 2020-05-12<br />incidmsia2.counts:  13","incidmsia2.dates: 2020-05-13<br />incidmsia2.counts:  33","incidmsia2.dates: 2020-05-14<br />incidmsia2.counts:  40","incidmsia2.dates: 2020-05-15<br />incidmsia2.counts:  36","incidmsia2.dates: 2020-05-16<br />incidmsia2.counts:  11","incidmsia2.dates: 2020-05-17<br />incidmsia2.counts:  17","incidmsia2.dates: 2020-05-18<br />incidmsia2.counts:  26","incidmsia2.dates: 2020-05-19<br />incidmsia2.counts:  35","incidmsia2.dates: 2020-05-20<br />incidmsia2.counts:  21","incidmsia2.dates: 2020-05-21<br />incidmsia2.counts:  47","incidmsia2.dates: 2020-05-22<br />incidmsia2.counts:  53","incidmsia2.dates: 2020-05-23<br />incidmsia2.counts:  44","incidmsia2.dates: 2020-05-24<br />incidmsia2.counts:  53"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(44,53,57,1)","dash":"dot"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[18324,18325,18326,18327,18328,18329,18330,18331,18332,18333,18334,18335,18336,18337,18338,18339,18340,18341,18342,18343,18344,18345,18346,18347,18348,18349,18350,18351,18352,18353,18354,18355,18356,18357,18358,18359,18360,18361,18362,18363,18364,18365,18366,18367,18368,18369,18370,18371,18372,18373,18374,18375,18376,18377,18378,18379,18380,18381,18382,18383,18384,18385,18386,18387,18388,18389,18390,18391,18392,18393,18394,18395,18396,18397,18398,18399,18400,18401,18402,18403,18404,18405,18406],"y":[2.14155434251331,2.21655552007574,2.27961315765937,2.32457115962242,2.36493639555834,2.41913147636936,2.50651086179628,2.65015640693416,2.87408181571664,3.19009734896091,3.56119949501854,3.93818129912468,4.27685914875264,4.5531428003284,4.74796535251609,4.85329325961527,4.90522639846715,4.94331220498497,4.97675492882862,5.00717302309461,5.03526776515484,5.05807172948272,5.07170031482705,5.07385378218769,5.06857184156881,5.06147906522563,5.05786468813185,5.061676596135,5.07652733780111,5.10297245621825,5.12933947256278,5.14089890253314,5.12731279409226,5.09580932426105,5.05746446617674,5.02117924838391,4.99531096327895,4.98472172284223,4.98029291738991,4.96941075682216,4.94025011175426,4.88414049566222,4.79320008273718,4.66444329547092,4.51446954955765,4.3647745089922,4.23455582844614,4.13381912529787,4.07027200760254,4.04516094247466,4.03388783326627,4.00944517269726,3.96103237472133,3.88190058360065,3.77378298019262,3.67234089173556,3.62171768206304,3.65147285743002,3.73283049377712,3.82243080946633,3.88499470388152,3.91756580049405,3.92526840379713,3.91467240814433,3.89813006733063,3.88943922501136,3.89243651973768,3.87111376964406,3.79155378926419,3.6680481991451,3.52694082133719,3.39171318604775,3.2743976561116,3.18416430252045,3.13026189724601,3.12225401617997,3.16978293619399,3.27658160140658,3.42274562492345,3.58246128709712,3.73477122373049,3.87814349242787,4.01590250624398],"text":["incidmsia2.dates: 18324<br />incidmsia2.counts: 2.141554","incidmsia2.dates: 18325<br />incidmsia2.counts: 2.216556","incidmsia2.dates: 18326<br />incidmsia2.counts: 2.279613","incidmsia2.dates: 18327<br />incidmsia2.counts: 2.324571","incidmsia2.dates: 18328<br />incidmsia2.counts: 2.364936","incidmsia2.dates: 18329<br />incidmsia2.counts: 2.419131","incidmsia2.dates: 18330<br />incidmsia2.counts: 2.506511","incidmsia2.dates: 18331<br />incidmsia2.counts: 2.650156","incidmsia2.dates: 18332<br />incidmsia2.counts: 2.874082","incidmsia2.dates: 18333<br />incidmsia2.counts: 3.190097","incidmsia2.dates: 18334<br />incidmsia2.counts: 3.561199","incidmsia2.dates: 18335<br />incidmsia2.counts: 3.938181","incidmsia2.dates: 18336<br />incidmsia2.counts: 4.276859","incidmsia2.dates: 18337<br />incidmsia2.counts: 4.553143","incidmsia2.dates: 18338<br />incidmsia2.counts: 4.747965","incidmsia2.dates: 18339<br />incidmsia2.counts: 4.853293","incidmsia2.dates: 18340<br />incidmsia2.counts: 4.905226","incidmsia2.dates: 18341<br />incidmsia2.counts: 4.943312","incidmsia2.dates: 18342<br />incidmsia2.counts: 4.976755","incidmsia2.dates: 18343<br />incidmsia2.counts: 5.007173","incidmsia2.dates: 18344<br />incidmsia2.counts: 5.035268","incidmsia2.dates: 18345<br />incidmsia2.counts: 5.058072","incidmsia2.dates: 18346<br />incidmsia2.counts: 5.071700","incidmsia2.dates: 18347<br />incidmsia2.counts: 5.073854","incidmsia2.dates: 18348<br />incidmsia2.counts: 5.068572","incidmsia2.dates: 18349<br />incidmsia2.counts: 5.061479","incidmsia2.dates: 18350<br />incidmsia2.counts: 5.057865","incidmsia2.dates: 18351<br />incidmsia2.counts: 5.061677","incidmsia2.dates: 18352<br />incidmsia2.counts: 5.076527","incidmsia2.dates: 18353<br />incidmsia2.counts: 5.102972","incidmsia2.dates: 18354<br />incidmsia2.counts: 5.129339","incidmsia2.dates: 18355<br />incidmsia2.counts: 5.140899","incidmsia2.dates: 18356<br />incidmsia2.counts: 5.127313","incidmsia2.dates: 18357<br />incidmsia2.counts: 5.095809","incidmsia2.dates: 18358<br />incidmsia2.counts: 5.057464","incidmsia2.dates: 18359<br />incidmsia2.counts: 5.021179","incidmsia2.dates: 18360<br />incidmsia2.counts: 4.995311","incidmsia2.dates: 18361<br />incidmsia2.counts: 4.984722","incidmsia2.dates: 18362<br />incidmsia2.counts: 4.980293","incidmsia2.dates: 18363<br />incidmsia2.counts: 4.969411","incidmsia2.dates: 18364<br />incidmsia2.counts: 4.940250","incidmsia2.dates: 18365<br />incidmsia2.counts: 4.884140","incidmsia2.dates: 18366<br />incidmsia2.counts: 4.793200","incidmsia2.dates: 18367<br />incidmsia2.counts: 4.664443","incidmsia2.dates: 18368<br />incidmsia2.counts: 4.514470","incidmsia2.dates: 18369<br />incidmsia2.counts: 4.364775","incidmsia2.dates: 18370<br />incidmsia2.counts: 4.234556","incidmsia2.dates: 18371<br />incidmsia2.counts: 4.133819","incidmsia2.dates: 18372<br />incidmsia2.counts: 4.070272","incidmsia2.dates: 18373<br />incidmsia2.counts: 4.045161","incidmsia2.dates: 18374<br />incidmsia2.counts: 4.033888","incidmsia2.dates: 18375<br />incidmsia2.counts: 4.009445","incidmsia2.dates: 18376<br />incidmsia2.counts: 3.961032","incidmsia2.dates: 18377<br />incidmsia2.counts: 3.881901","incidmsia2.dates: 18378<br />incidmsia2.counts: 3.773783","incidmsia2.dates: 18379<br />incidmsia2.counts: 3.672341","incidmsia2.dates: 18380<br />incidmsia2.counts: 3.621718","incidmsia2.dates: 18381<br />incidmsia2.counts: 3.651473","incidmsia2.dates: 18382<br />incidmsia2.counts: 3.732830","incidmsia2.dates: 18383<br />incidmsia2.counts: 3.822431","incidmsia2.dates: 18384<br />incidmsia2.counts: 3.884995","incidmsia2.dates: 18385<br />incidmsia2.counts: 3.917566","incidmsia2.dates: 18386<br />incidmsia2.counts: 3.925268","incidmsia2.dates: 18387<br />incidmsia2.counts: 3.914672","incidmsia2.dates: 18388<br />incidmsia2.counts: 3.898130","incidmsia2.dates: 18389<br />incidmsia2.counts: 3.889439","incidmsia2.dates: 18390<br />incidmsia2.counts: 3.892437","incidmsia2.dates: 18391<br />incidmsia2.counts: 3.871114","incidmsia2.dates: 18392<br />incidmsia2.counts: 3.791554","incidmsia2.dates: 18393<br />incidmsia2.counts: 3.668048","incidmsia2.dates: 18394<br />incidmsia2.counts: 3.526941","incidmsia2.dates: 18395<br />incidmsia2.counts: 3.391713","incidmsia2.dates: 18396<br />incidmsia2.counts: 3.274398","incidmsia2.dates: 18397<br />incidmsia2.counts: 3.184164","incidmsia2.dates: 18398<br />incidmsia2.counts: 3.130262","incidmsia2.dates: 18399<br />incidmsia2.counts: 3.122254","incidmsia2.dates: 18400<br />incidmsia2.counts: 3.169783","incidmsia2.dates: 18401<br />incidmsia2.counts: 3.276582","incidmsia2.dates: 18402<br />incidmsia2.counts: 3.422746","incidmsia2.dates: 18403<br />incidmsia2.counts: 3.582461","incidmsia2.dates: 18404<br />incidmsia2.counts: 3.734771","incidmsia2.dates: 18405<br />incidmsia2.counts: 3.878143","incidmsia2.dates: 18406<br />incidmsia2.counts: 4.015903"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(70,130,180,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[18339,18340,18341,18342,18343,18344,18345,18346,18347,18348,18349,18350,18351,18352,18353,18354,18355,18356,18357,18358,18359,18360,18361,18362,18363,18364,18365,18366,18367,18368,18369,18370,18371,18372,18373,18374,18375,18376,18377,18378,18379,18380,18381,18382,18383],"y":[5.14749447681345,5.38449506278909,5.62401750618734,5.8636311755981,6.10479323241498,6.3500127354284,6.59304453414244,6.83679619004164,7.07918439460967,7.32019600082673,7.5624214727238,7.80669637252118,8.0457485243741,8.28928832300032,8.53719187792293,8.77948052984807,9.02346847808341,9.2690337183154,9.50977807543882,9.75906853279064,9.99900225687843,10.2444496944302,10.4905656331183,10.7272023631119,10.9713484948312,11.2103327797827,11.4558470479305,11.7006697919326,11.9362763316754,12.1795900568881,12.4217745765438,12.6681244299935,12.910105363066,13.1527732736733,13.3946056167182,13.6354965367611,13.8846363539497,14.1240696803135,14.3664735899748,14.6066345868781,14.8487400580903,15.0896599129525,15.3311511756062,15.57234450316,15.8154012553609],"text":["dates: 2020-03-18<br />value:     172.0<br />incidmsia2.dates: 2020-03-18<br />incidmsia2.counts:     172.0","dates: 2020-03-19<br />value:     218.0<br />incidmsia2.dates: 2020-03-19<br />incidmsia2.counts:     218.0","dates: 2020-03-20<br />value:     277.0<br />incidmsia2.dates: 2020-03-20<br />incidmsia2.counts:     277.0","dates: 2020-03-21<br />value:     352.0<br />incidmsia2.dates: 2020-03-21<br />incidmsia2.counts:     352.0","dates: 2020-03-22<br />value:     448.0<br />incidmsia2.dates: 2020-03-22<br />incidmsia2.counts:     448.0","dates: 2020-03-23<br />value:     572.5<br />incidmsia2.dates: 2020-03-23<br />incidmsia2.counts:     572.5","dates: 2020-03-24<br />value:     730.0<br />incidmsia2.dates: 2020-03-24<br />incidmsia2.counts:     730.0","dates: 2020-03-25<br />value:     931.5<br />incidmsia2.dates: 2020-03-25<br />incidmsia2.counts:     931.5","dates: 2020-03-26<br />value:    1187.0<br />incidmsia2.dates: 2020-03-26<br />incidmsia2.counts:    1187.0","dates: 2020-03-27<br />value:    1510.5<br />incidmsia2.dates: 2020-03-27<br />incidmsia2.counts:    1510.5","dates: 2020-03-28<br />value:    1924.5<br />incidmsia2.dates: 2020-03-28<br />incidmsia2.counts:    1924.5","dates: 2020-03-29<br />value:    2457.0<br />incidmsia2.dates: 2020-03-29<br />incidmsia2.counts:    2457.0","dates: 2020-03-30<br />value:    3120.5<br />incidmsia2.dates: 2020-03-30<br />incidmsia2.counts:    3120.5","dates: 2020-03-31<br />value:    3981.0<br />incidmsia2.dates: 2020-03-31<br />incidmsia2.counts:    3981.0","dates: 2020-04-01<br />value:    5101.0<br />incidmsia2.dates: 2020-04-01<br />incidmsia2.counts:    5101.0","dates: 2020-04-02<br />value:    6499.5<br />incidmsia2.dates: 2020-04-02<br />incidmsia2.counts:    6499.5","dates: 2020-04-03<br />value:    8295.5<br />incidmsia2.dates: 2020-04-03<br />incidmsia2.counts:    8295.5","dates: 2020-04-04<br />value:   10604.5<br />incidmsia2.dates: 2020-04-04<br />incidmsia2.counts:   10604.5","dates: 2020-04-05<br />value:   13491.0<br />incidmsia2.dates: 2020-04-05<br />incidmsia2.counts:   13491.0","dates: 2020-04-06<br />value:   17310.5<br />incidmsia2.dates: 2020-04-06<br />incidmsia2.counts:   17310.5","dates: 2020-04-07<br />value:   22004.5<br />incidmsia2.dates: 2020-04-07<br />incidmsia2.counts:   22004.5","dates: 2020-04-08<br />value:   28126.0<br />incidmsia2.dates: 2020-04-08<br />incidmsia2.counts:   28126.0","dates: 2020-04-09<br />value:   35974.5<br />incidmsia2.dates: 2020-04-09<br />incidmsia2.counts:   35974.5","dates: 2020-04-10<br />value:   45579.0<br />incidmsia2.dates: 2020-04-10<br />incidmsia2.counts:   45579.0","dates: 2020-04-11<br />value:   58183.0<br />incidmsia2.dates: 2020-04-11<br />incidmsia2.counts:   58183.0","dates: 2020-04-12<br />value:   73890.0<br />incidmsia2.dates: 2020-04-12<br />incidmsia2.counts:   73890.0","dates: 2020-04-13<br />value:   94452.0<br />incidmsia2.dates: 2020-04-13<br />incidmsia2.counts:   94452.0","dates: 2020-04-14<br />value:  120652.5<br />incidmsia2.dates: 2020-04-14<br />incidmsia2.counts:  120652.5","dates: 2020-04-15<br />value:  152707.0<br />incidmsia2.dates: 2020-04-15<br />incidmsia2.counts:  152707.0","dates: 2020-04-16<br />value:  194773.0<br />incidmsia2.dates: 2020-04-16<br />incidmsia2.counts:  194773.0","dates: 2020-04-17<br />value:  248146.5<br />incidmsia2.dates: 2020-04-17<br />incidmsia2.counts:  248146.5","dates: 2020-04-18<br />value:  317465.5<br />incidmsia2.dates: 2020-04-18<br />incidmsia2.counts:  317465.5","dates: 2020-04-19<br />value:  404378.0<br />incidmsia2.dates: 2020-04-19<br />incidmsia2.counts:  404378.0","dates: 2020-04-20<br />value:  515438.5<br />incidmsia2.dates: 2020-04-20<br />incidmsia2.counts:  515438.5","dates: 2020-04-21<br />value:  656452.5<br />incidmsia2.dates: 2020-04-21<br />incidmsia2.counts:  656452.5","dates: 2020-04-22<br />value:  835258.5<br />incidmsia2.dates: 2020-04-22<br />incidmsia2.counts:  835258.5","dates: 2020-04-23<br />value: 1071571.0<br />incidmsia2.dates: 2020-04-23<br />incidmsia2.counts: 1071571.0","dates: 2020-04-24<br />value: 1361462.0<br />incidmsia2.dates: 2020-04-24<br />incidmsia2.counts: 1361462.0","dates: 2020-04-25<br />value: 1734923.0<br />incidmsia2.dates: 2020-04-25<br />incidmsia2.counts: 1734923.0","dates: 2020-04-26<br />value: 2205874.5<br />incidmsia2.dates: 2020-04-26<br />incidmsia2.counts: 2205874.5","dates: 2020-04-27<br />value: 2810126.5<br />incidmsia2.dates: 2020-04-27<br />incidmsia2.counts: 2810126.5","dates: 2020-04-28<br />value: 3575658.5<br />incidmsia2.dates: 2020-04-28<br />incidmsia2.counts: 3575658.5","dates: 2020-04-29<br />value: 4552336.5<br />incidmsia2.dates: 2020-04-29<br />incidmsia2.counts: 4552336.5","dates: 2020-04-30<br />value: 5794064.0<br />incidmsia2.dates: 2020-04-30<br />incidmsia2.counts: 5794064.0","dates: 2020-05-01<br />value: 7388248.5<br />incidmsia2.dates: 2020-05-01<br />incidmsia2.counts: 7388248.5"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(255,99,71,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":27.8721461187215,"r":7.30593607305936,"b":41.8264840182648,"l":78.1735159817352},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[18319.9,18410.1],"tickmode":"array","ticktext":["Mar","Apr","May"],"tickvals":[18322,18353,18383],"categoryorder":"array","categoryarray":["Mar","Apr","May"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Date","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.899139745287758,16.5256994225073],"tickmode":"array","ticktext":["55","2 981","162 755","8 886 111"],"tickvals":[4,8,12,16],"categoryorder":"array","categoryarray":["55","2 981","162 755","8 886 111"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Incidence (log scale y-axis)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"4677573c9bfb":{"x":{},"y":{},"type":"scatter"},"46774c24a87b":{"x":{},"y":{}},"46777ab14a4a":{"x":{},"y":{},"x.1":{},"y.1":{}}},"cur_data":"4677573c9bfb","visdat":{"4677573c9bfb":["function (y) ","x"],"46774c24a87b":["function (y) ","x"],"46777ab14a4a":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 1: Click on the chart to engage its interactive mode. <em>RED</em> projected natural trajectory, <em>BLUE</em> smoothened epidemic curve, <em>BLACK DASHED</em> actual epidemic curve. Smoothened epidemic curve contains incidence in log values.
+</p>
+</div>
+</div>
+<p>The chart above confirms that we are curve-benders! The actual curve has separated from the projected natural trajectory by a large margin. All well and good, but we need to assess how good the curve-bending has been. For that, we need to gage the daily effective reproduction numbers.</p>
+<img src="https://static.rogerebert.com/uploads/review/primary_image/reviews/the-last-airbender-2010/EB20100630REVIEWS100639999AR.jpg"
+     alt="try saya"
+     width="100%"
+     style="float: left; margin-right: 10px;"/>
+<figcaption>
+Source: <a href="https://www.rogerebert.com/reviews/the-last-airbender-2010" class="uri">https://www.rogerebert.com/reviews/the-last-airbender-2010</a>
+</figcaption>
+<h1 id="daily-r_e">Daily <span class="math inline">\(R_e\)</span></h1>
+<p><a href="https://www.cebm.net/covid-19/when-will-it-be-over-an-introduction-to-viral-reproduction-numbers-r0-and-re/"><span class="math inline">\(R_e\)</span></a> is the reproduction number calculated at different time points during the epidemic, i.e. the average number of expected infected persons by a primary case in a population of susceptibles and infected individuals.</p>
+<p>The estimation of <span class="math inline">\(R_e\)</span> requires knowing the <a href="https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article">serial interval</a>. The serial interval is the time elapsed between the symptom onset of the primary case and the date of symptom onset of the secondary case. Here we used the estimated serial interval by Zhanwei et al (2020), with a mean of 3.96 days and a standard deviation 4.75 days (Zhanwei et al 2020). In this analyses, <span class="math inline">\(R_e\)</span> was estimated in a sliding window of 7-days. The method applied here is based on Wallinga and Teunis (2004). Estimates of <span class="math inline">\(R_e\)</span> were carried out in R v3.6.2, R-package EpiEstim v2.2-1. The code for plotting and calculating <span class="math inline">\(R_e\)</span> based on Churches (2020).</p>
+<p>The model was also adjusted for uncertainty in the serial interval assumption.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:unnamed-chunk-5"></span>
+<div id="htmlwidget-470a26d5534bf0318912" style="width:768px;height:384px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-470a26d5534bf0318912">{"x":{"data":[{"x":[18331,18332,18333,18334,18335,18336,18337,18338,18339,18340,18341,18342,18343,18344,18345,18346,18347,18348,18349,18350,18351,18352,18353,18354,18355,18356,18357,18358,18359,18360,18361,18362,18363,18364,18365,18366,18367,18368,18369,18370,18371,18372,18373,18374,18375,18376,18377,18378,18379,18380,18381,18382,18383,18384,18385,18386,18387,18388,18389,18390,18391,18392,18393,18394,18395,18396,18397,18398,18399,18400,18401,18402,18403,18404,18405,18406,18407,18408],"y":[1.61018932035547,1.48194933380212,1.3844873490728,1.4061651820819,1.62114087072359,3.10441385453129,2.41607909910039,2.08028599556496,1.85857068572777,1.7308789506737,1.61653498919599,1.57262835503842,1.26632158200645,1.3262263467248,1.21466688268548,1.23084759296917,1.3141638905116,1.2100624069104,1.15905613487785,1.14952782316717,1.06090124647139,1.08963570063889,1.04376224996904,1.01516566579163,1.10241460483368,1.06307456219461,1.07329975205939,1.03248848151454,1.05547856091588,1.05441780400143,0.955228026201955,0.890439619567672,0.961011111217228,0.948456329963038,0.965244073482882,0.97378088014341,0.911663231089798,0.93959496920211,0.906817552456656,0.798409539590407,0.778438873188398,0.718896211242101,0.638179863771842,0.663309194598453,0.6666447774207,0.758311098529806,0.790177824924412,0.735618594037468,0.792758459341513,0.774085466189447,0.753114253729361,0.709188282274873,0.687746055969785,0.864332168253436,0.9637587077729,0.968256166470417,0.957451977027027,1.01883452720195,1.01808851555851,1.022604981042,0.904499055365594,0.926645927753376,0.973219131610918,0.929029996160496,0.916057608831485,0.945406885841314,0.875114817246866,0.781968450084541,0.677177789928754,0.641018017020165,0.805841692237665,0.78565767462777,0.853538636444155,0.953068912711187,1.09404851306125,1.19464579565333,1.66758049668884,1.80661985736914],"text":["time: 2020-03-10<br />Mean.R.: 1.6101893","time: 2020-03-11<br />Mean.R.: 1.4819493","time: 2020-03-12<br />Mean.R.: 1.3844873","time: 2020-03-13<br />Mean.R.: 1.4061652","time: 2020-03-14<br />Mean.R.: 1.6211409","time: 2020-03-15<br />Mean.R.: 3.1044139","time: 2020-03-16<br />Mean.R.: 2.4160791","time: 2020-03-17<br />Mean.R.: 2.0802860","time: 2020-03-18<br />Mean.R.: 1.8585707","time: 2020-03-19<br />Mean.R.: 1.7308790","time: 2020-03-20<br />Mean.R.: 1.6165350","time: 2020-03-21<br />Mean.R.: 1.5726284","time: 2020-03-22<br />Mean.R.: 1.2663216","time: 2020-03-23<br />Mean.R.: 1.3262263","time: 2020-03-24<br />Mean.R.: 1.2146669","time: 2020-03-25<br />Mean.R.: 1.2308476","time: 2020-03-26<br />Mean.R.: 1.3141639","time: 2020-03-27<br />Mean.R.: 1.2100624","time: 2020-03-28<br />Mean.R.: 1.1590561","time: 2020-03-29<br />Mean.R.: 1.1495278","time: 2020-03-30<br />Mean.R.: 1.0609012","time: 2020-03-31<br />Mean.R.: 1.0896357","time: 2020-04-01<br />Mean.R.: 1.0437622","time: 2020-04-02<br />Mean.R.: 1.0151657","time: 2020-04-03<br />Mean.R.: 1.1024146","time: 2020-04-04<br />Mean.R.: 1.0630746","time: 2020-04-05<br />Mean.R.: 1.0732998","time: 2020-04-06<br />Mean.R.: 1.0324885","time: 2020-04-07<br />Mean.R.: 1.0554786","time: 2020-04-08<br />Mean.R.: 1.0544178","time: 2020-04-09<br />Mean.R.: 0.9552280","time: 2020-04-10<br />Mean.R.: 0.8904396","time: 2020-04-11<br />Mean.R.: 0.9610111","time: 2020-04-12<br />Mean.R.: 0.9484563","time: 2020-04-13<br />Mean.R.: 0.9652441","time: 2020-04-14<br />Mean.R.: 0.9737809","time: 2020-04-15<br />Mean.R.: 0.9116632","time: 2020-04-16<br />Mean.R.: 0.9395950","time: 2020-04-17<br />Mean.R.: 0.9068176","time: 2020-04-18<br />Mean.R.: 0.7984095","time: 2020-04-19<br />Mean.R.: 0.7784389","time: 2020-04-20<br />Mean.R.: 0.7188962","time: 2020-04-21<br />Mean.R.: 0.6381799","time: 2020-04-22<br />Mean.R.: 0.6633092","time: 2020-04-23<br />Mean.R.: 0.6666448","time: 2020-04-24<br />Mean.R.: 0.7583111","time: 2020-04-25<br />Mean.R.: 0.7901778","time: 2020-04-26<br />Mean.R.: 0.7356186","time: 2020-04-27<br />Mean.R.: 0.7927585","time: 2020-04-28<br />Mean.R.: 0.7740855","time: 2020-04-29<br />Mean.R.: 0.7531143","time: 2020-04-30<br />Mean.R.: 0.7091883","time: 2020-05-01<br />Mean.R.: 0.6877461","time: 2020-05-02<br />Mean.R.: 0.8643322","time: 2020-05-03<br />Mean.R.: 0.9637587","time: 2020-05-04<br />Mean.R.: 0.9682562","time: 2020-05-05<br />Mean.R.: 0.9574520","time: 2020-05-06<br />Mean.R.: 1.0188345","time: 2020-05-07<br />Mean.R.: 1.0180885","time: 2020-05-08<br />Mean.R.: 1.0226050","time: 2020-05-09<br />Mean.R.: 0.9044991","time: 2020-05-10<br />Mean.R.: 0.9266459","time: 2020-05-11<br />Mean.R.: 0.9732191","time: 2020-05-12<br />Mean.R.: 0.9290300","time: 2020-05-13<br />Mean.R.: 0.9160576","time: 2020-05-14<br />Mean.R.: 0.9454069","time: 2020-05-15<br />Mean.R.: 0.8751148","time: 2020-05-16<br />Mean.R.: 0.7819685","time: 2020-05-17<br />Mean.R.: 0.6771778","time: 2020-05-18<br />Mean.R.: 0.6410180","time: 2020-05-19<br />Mean.R.: 0.8058417","time: 2020-05-20<br />Mean.R.: 0.7856577","time: 2020-05-21<br />Mean.R.: 0.8535386","time: 2020-05-22<br />Mean.R.: 0.9530689","time: 2020-05-23<br />Mean.R.: 1.0940485","time: 2020-05-24<br />Mean.R.: 1.1946458","time: 2020-05-25<br />Mean.R.: 1.6675805","time: 2020-05-26<br />Mean.R.: 1.8066199"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(70,130,180,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[18331,18332,18333,18334,18335,18336,18337,18338,18339,18340,18341,18342,18343,18344,18345,18346,18347,18348,18349,18350,18351,18352,18353,18354,18355,18356,18357,18358,18359,18360,18361,18362,18363,18364,18365,18366,18367,18368,18369,18370,18371,18372,18373,18374,18375,18376,18377,18378,18379,18380,18381,18382,18383,18384,18385,18386,18387,18388,18389,18390,18391,18392,18393,18394,18395,18396,18397,18398,18399,18400,18401,18402,18403,18404,18405,18406,18407,18408,18408,18408,18407,18406,18405,18404,18403,18402,18401,18400,18399,18398,18397,18396,18395,18394,18393,18392,18391,18390,18389,18388,18387,18386,18385,18384,18383,18382,18381,18380,18379,18378,18377,18376,18375,18374,18373,18372,18371,18370,18369,18368,18367,18366,18365,18364,18363,18362,18361,18360,18359,18358,18357,18356,18355,18354,18353,18352,18351,18350,18349,18348,18347,18346,18345,18344,18343,18342,18341,18340,18339,18338,18337,18336,18335,18334,18333,18332,18331,18331],"y":[1.26863216479753,1.18891019492866,1.11756660155117,1.15155925325593,1.35680585775997,2.72855055665184,2.02652217966077,1.77847521124712,1.61629274861579,1.52865824351157,1.4433518827556,1.4224245715272,1.14767065085967,1.2268306915352,1.1235867026787,1.14740312079794,1.22893916714339,1.12753468597244,1.08575547216432,1.07947238652703,0.996562925508025,1.02677901348222,0.982770045529453,0.955353653135464,1.04004383932361,1.00176265681745,1.01320980300273,0.973713686355003,0.996794672894605,0.994754096140174,0.899772189283917,0.836003741486166,0.90081450118513,0.890704975485571,0.906078377490946,0.913772207098001,0.85408393668635,0.879275297527798,0.847275180998603,0.742181106917519,0.71831407770931,0.657520524527729,0.576159333625502,0.593704255929938,0.594242439982378,0.678466776477852,0.709823360942645,0.660114113927428,0.710202551029045,0.694458272259552,0.671415338320297,0.627656101926341,0.604431114586821,0.765499735603254,0.863795611258487,0.868844602122891,0.859242841996407,0.91820780625748,0.916184264878489,0.924015681835177,0.810615198426874,0.8326198419946,0.874587826380488,0.832118479711133,0.817935058475862,0.845600628318943,0.778823675977687,0.68914668884485,0.586992446461966,0.547380367351319,0.69164104374282,0.674728160313246,0.735478628784986,0.826227631912109,0.961625709126969,1.06026075879118,1.50589132482603,1.6153001888428,1.6153001888428,2.01043424789725,1.83779501249217,1.33927897075856,1.23646162412791,1.08740607084227,0.981756591253342,0.906862572649078,0.932515845749929,0.743308817275198,0.774846651924728,0.880416241455346,0.976230492033659,1.05099771290101,1.01798478201865,1.0322115748048,1.07681395913346,1.02706497902259,1.00533670067865,1.12684180234399,1.12366757518174,1.12532074838177,1.06095018227137,1.07316346921207,1.07178482240922,0.972409427746749,0.777718474420027,0.796268669748272,0.841086956209292,0.858972462475475,0.879726103676419,0.816682920794145,0.876404131407232,0.84559277260547,0.744849485675309,0.739487918914642,0.703819266744104,0.783481924783607,0.841032392584469,0.856859215081419,0.967350025690375,1.00146194475078,0.971052240596705,1.03460711751851,1.02568734655233,1.00885435788858,1.02241898357701,0.946622693870361,1.01192273537608,1.11560445940592,1.11677974834339,1.09301349186578,1.13519613215449,1.12528796971558,1.16722031364404,1.07734165636676,1.10712003701321,1.15496321937832,1.12721046711151,1.22237651518991,1.23434479709956,1.29551924776822,1.40253211128203,1.31840640685863,1.31052047172281,1.43104450645734,1.39356232684909,1.73563093475933,1.80547826677659,1.95395001915395,2.12918251280061,2.42082534701825,2.85491889082392,3.52341886314159,1.90553644208886,1.69113763152171,1.67971339921114,1.81462523402896,1.99941478640623,1.26863216479753],"text":["Quantile.0.025.R.: 1.2686322<br />Quantile.0.975.R.: 1.9994148<br />time: 2020-03-10<br />Mean.R.: 1.6101893","Quantile.0.025.R.: 1.1889102<br />Quantile.0.975.R.: 1.8146252<br />time: 2020-03-11<br />Mean.R.: 1.4819493","Quantile.0.025.R.: 1.1175666<br />Quantile.0.975.R.: 1.6797134<br />time: 2020-03-12<br />Mean.R.: 1.3844873","Quantile.0.025.R.: 1.1515593<br />Quantile.0.975.R.: 1.6911376<br />time: 2020-03-13<br />Mean.R.: 1.4061652","Quantile.0.025.R.: 1.3568059<br />Quantile.0.975.R.: 1.9055364<br />time: 2020-03-14<br />Mean.R.: 1.6211409","Quantile.0.025.R.: 2.7285506<br />Quantile.0.975.R.: 3.5234189<br />time: 2020-03-15<br />Mean.R.: 3.1044139","Quantile.0.025.R.: 2.0265222<br />Quantile.0.975.R.: 2.8549189<br />time: 2020-03-16<br />Mean.R.: 2.4160791","Quantile.0.025.R.: 1.7784752<br />Quantile.0.975.R.: 2.4208253<br />time: 2020-03-17<br />Mean.R.: 2.0802860","Quantile.0.025.R.: 1.6162927<br />Quantile.0.975.R.: 2.1291825<br />time: 2020-03-18<br />Mean.R.: 1.8585707","Quantile.0.025.R.: 1.5286582<br />Quantile.0.975.R.: 1.9539500<br />time: 2020-03-19<br />Mean.R.: 1.7308790","Quantile.0.025.R.: 1.4433519<br />Quantile.0.975.R.: 1.8054783<br />time: 2020-03-20<br />Mean.R.: 1.6165350","Quantile.0.025.R.: 1.4224246<br />Quantile.0.975.R.: 1.7356309<br />time: 2020-03-21<br />Mean.R.: 1.5726284","Quantile.0.025.R.: 1.1476707<br />Quantile.0.975.R.: 1.3935623<br />time: 2020-03-22<br />Mean.R.: 1.2663216","Quantile.0.025.R.: 1.2268307<br />Quantile.0.975.R.: 1.4310445<br />time: 2020-03-23<br />Mean.R.: 1.3262263","Quantile.0.025.R.: 1.1235867<br />Quantile.0.975.R.: 1.3105205<br />time: 2020-03-24<br />Mean.R.: 1.2146669","Quantile.0.025.R.: 1.1474031<br />Quantile.0.975.R.: 1.3184064<br />time: 2020-03-25<br />Mean.R.: 1.2308476","Quantile.0.025.R.: 1.2289392<br />Quantile.0.975.R.: 1.4025321<br />time: 2020-03-26<br />Mean.R.: 1.3141639","Quantile.0.025.R.: 1.1275347<br />Quantile.0.975.R.: 1.2955192<br />time: 2020-03-27<br />Mean.R.: 1.2100624","Quantile.0.025.R.: 1.0857555<br />Quantile.0.975.R.: 1.2343448<br />time: 2020-03-28<br />Mean.R.: 1.1590561","Quantile.0.025.R.: 1.0794724<br />Quantile.0.975.R.: 1.2223765<br />time: 2020-03-29<br />Mean.R.: 1.1495278","Quantile.0.025.R.: 0.9965629<br />Quantile.0.975.R.: 1.1272105<br />time: 2020-03-30<br />Mean.R.: 1.0609012","Quantile.0.025.R.: 1.0267790<br />Quantile.0.975.R.: 1.1549632<br />time: 2020-03-31<br />Mean.R.: 1.0896357","Quantile.0.025.R.: 0.9827700<br />Quantile.0.975.R.: 1.1071200<br />time: 2020-04-01<br />Mean.R.: 1.0437622","Quantile.0.025.R.: 0.9553537<br />Quantile.0.975.R.: 1.0773417<br />time: 2020-04-02<br />Mean.R.: 1.0151657","Quantile.0.025.R.: 1.0400438<br />Quantile.0.975.R.: 1.1672203<br />time: 2020-04-03<br />Mean.R.: 1.1024146","Quantile.0.025.R.: 1.0017627<br />Quantile.0.975.R.: 1.1252880<br />time: 2020-04-04<br />Mean.R.: 1.0630746","Quantile.0.025.R.: 1.0132098<br />Quantile.0.975.R.: 1.1351961<br />time: 2020-04-05<br />Mean.R.: 1.0732998","Quantile.0.025.R.: 0.9737137<br />Quantile.0.975.R.: 1.0930135<br />time: 2020-04-06<br />Mean.R.: 1.0324885","Quantile.0.025.R.: 0.9967947<br />Quantile.0.975.R.: 1.1167797<br />time: 2020-04-07<br />Mean.R.: 1.0554786","Quantile.0.025.R.: 0.9947541<br />Quantile.0.975.R.: 1.1156045<br />time: 2020-04-08<br />Mean.R.: 1.0544178","Quantile.0.025.R.: 0.8997722<br />Quantile.0.975.R.: 1.0119227<br />time: 2020-04-09<br />Mean.R.: 0.9552280","Quantile.0.025.R.: 0.8360037<br />Quantile.0.975.R.: 0.9466227<br />time: 2020-04-10<br />Mean.R.: 0.8904396","Quantile.0.025.R.: 0.9008145<br />Quantile.0.975.R.: 1.0224190<br />time: 2020-04-11<br />Mean.R.: 0.9610111","Quantile.0.025.R.: 0.8907050<br />Quantile.0.975.R.: 1.0088544<br />time: 2020-04-12<br />Mean.R.: 0.9484563","Quantile.0.025.R.: 0.9060784<br />Quantile.0.975.R.: 1.0256873<br />time: 2020-04-13<br />Mean.R.: 0.9652441","Quantile.0.025.R.: 0.9137722<br />Quantile.0.975.R.: 1.0346071<br />time: 2020-04-14<br />Mean.R.: 0.9737809","Quantile.0.025.R.: 0.8540839<br />Quantile.0.975.R.: 0.9710522<br />time: 2020-04-15<br />Mean.R.: 0.9116632","Quantile.0.025.R.: 0.8792753<br />Quantile.0.975.R.: 1.0014619<br />time: 2020-04-16<br />Mean.R.: 0.9395950","Quantile.0.025.R.: 0.8472752<br />Quantile.0.975.R.: 0.9673500<br />time: 2020-04-17<br />Mean.R.: 0.9068176","Quantile.0.025.R.: 0.7421811<br />Quantile.0.975.R.: 0.8568592<br />time: 2020-04-18<br />Mean.R.: 0.7984095","Quantile.0.025.R.: 0.7183141<br />Quantile.0.975.R.: 0.8410324<br />time: 2020-04-19<br />Mean.R.: 0.7784389","Quantile.0.025.R.: 0.6575205<br />Quantile.0.975.R.: 0.7834819<br />time: 2020-04-20<br />Mean.R.: 0.7188962","Quantile.0.025.R.: 0.5761593<br />Quantile.0.975.R.: 0.7038193<br />time: 2020-04-21<br />Mean.R.: 0.6381799","Quantile.0.025.R.: 0.5937043<br />Quantile.0.975.R.: 0.7394879<br />time: 2020-04-22<br />Mean.R.: 0.6633092","Quantile.0.025.R.: 0.5942424<br />Quantile.0.975.R.: 0.7448495<br />time: 2020-04-23<br />Mean.R.: 0.6666448","Quantile.0.025.R.: 0.6784668<br />Quantile.0.975.R.: 0.8455928<br />time: 2020-04-24<br />Mean.R.: 0.7583111","Quantile.0.025.R.: 0.7098234<br />Quantile.0.975.R.: 0.8764041<br />time: 2020-04-25<br />Mean.R.: 0.7901778","Quantile.0.025.R.: 0.6601141<br />Quantile.0.975.R.: 0.8166829<br />time: 2020-04-26<br />Mean.R.: 0.7356186","Quantile.0.025.R.: 0.7102026<br />Quantile.0.975.R.: 0.8797261<br />time: 2020-04-27<br />Mean.R.: 0.7927585","Quantile.0.025.R.: 0.6944583<br />Quantile.0.975.R.: 0.8589725<br />time: 2020-04-28<br />Mean.R.: 0.7740855","Quantile.0.025.R.: 0.6714153<br />Quantile.0.975.R.: 0.8410870<br />time: 2020-04-29<br />Mean.R.: 0.7531143","Quantile.0.025.R.: 0.6276561<br />Quantile.0.975.R.: 0.7962687<br />time: 2020-04-30<br />Mean.R.: 0.7091883","Quantile.0.025.R.: 0.6044311<br />Quantile.0.975.R.: 0.7777185<br />time: 2020-05-01<br />Mean.R.: 0.6877461","Quantile.0.025.R.: 0.7654997<br />Quantile.0.975.R.: 0.9724094<br />time: 2020-05-02<br />Mean.R.: 0.8643322","Quantile.0.025.R.: 0.8637956<br />Quantile.0.975.R.: 1.0717848<br />time: 2020-05-03<br />Mean.R.: 0.9637587","Quantile.0.025.R.: 0.8688446<br />Quantile.0.975.R.: 1.0731635<br />time: 2020-05-04<br />Mean.R.: 0.9682562","Quantile.0.025.R.: 0.8592428<br />Quantile.0.975.R.: 1.0609502<br />time: 2020-05-05<br />Mean.R.: 0.9574520","Quantile.0.025.R.: 0.9182078<br />Quantile.0.975.R.: 1.1253207<br />time: 2020-05-06<br />Mean.R.: 1.0188345","Quantile.0.025.R.: 0.9161843<br />Quantile.0.975.R.: 1.1236676<br />time: 2020-05-07<br />Mean.R.: 1.0180885","Quantile.0.025.R.: 0.9240157<br />Quantile.0.975.R.: 1.1268418<br />time: 2020-05-08<br />Mean.R.: 1.0226050","Quantile.0.025.R.: 0.8106152<br />Quantile.0.975.R.: 1.0053367<br />time: 2020-05-09<br />Mean.R.: 0.9044991","Quantile.0.025.R.: 0.8326198<br />Quantile.0.975.R.: 1.0270650<br />time: 2020-05-10<br />Mean.R.: 0.9266459","Quantile.0.025.R.: 0.8745878<br />Quantile.0.975.R.: 1.0768140<br />time: 2020-05-11<br />Mean.R.: 0.9732191","Quantile.0.025.R.: 0.8321185<br />Quantile.0.975.R.: 1.0322116<br />time: 2020-05-12<br />Mean.R.: 0.9290300","Quantile.0.025.R.: 0.8179351<br />Quantile.0.975.R.: 1.0179848<br />time: 2020-05-13<br />Mean.R.: 0.9160576","Quantile.0.025.R.: 0.8456006<br />Quantile.0.975.R.: 1.0509977<br />time: 2020-05-14<br />Mean.R.: 0.9454069","Quantile.0.025.R.: 0.7788237<br />Quantile.0.975.R.: 0.9762305<br />time: 2020-05-15<br />Mean.R.: 0.8751148","Quantile.0.025.R.: 0.6891467<br />Quantile.0.975.R.: 0.8804162<br />time: 2020-05-16<br />Mean.R.: 0.7819685","Quantile.0.025.R.: 0.5869924<br />Quantile.0.975.R.: 0.7748467<br />time: 2020-05-17<br />Mean.R.: 0.6771778","Quantile.0.025.R.: 0.5473804<br />Quantile.0.975.R.: 0.7433088<br />time: 2020-05-18<br />Mean.R.: 0.6410180","Quantile.0.025.R.: 0.6916410<br />Quantile.0.975.R.: 0.9325158<br />time: 2020-05-19<br />Mean.R.: 0.8058417","Quantile.0.025.R.: 0.6747282<br />Quantile.0.975.R.: 0.9068626<br />time: 2020-05-20<br />Mean.R.: 0.7856577","Quantile.0.025.R.: 0.7354786<br />Quantile.0.975.R.: 0.9817566<br />time: 2020-05-21<br />Mean.R.: 0.8535386","Quantile.0.025.R.: 0.8262276<br />Quantile.0.975.R.: 1.0874061<br />time: 2020-05-22<br />Mean.R.: 0.9530689","Quantile.0.025.R.: 0.9616257<br />Quantile.0.975.R.: 1.2364616<br />time: 2020-05-23<br />Mean.R.: 1.0940485","Quantile.0.025.R.: 1.0602608<br />Quantile.0.975.R.: 1.3392790<br />time: 2020-05-24<br />Mean.R.: 1.1946458","Quantile.0.025.R.: 1.5058913<br />Quantile.0.975.R.: 1.8377950<br />time: 2020-05-25<br />Mean.R.: 1.6675805","Quantile.0.025.R.: 1.6153002<br />Quantile.0.975.R.: 2.0104342<br />time: 2020-05-26<br />Mean.R.: 1.8066199","Quantile.0.025.R.: 1.6153002<br />Quantile.0.975.R.: 2.0104342<br />time: 2020-05-26<br />Mean.R.: 1.8066199","Quantile.0.025.R.: 1.6153002<br />Quantile.0.975.R.: 2.0104342<br />time: 2020-05-26<br />Mean.R.: 1.8066199","Quantile.0.025.R.: 1.5058913<br />Quantile.0.975.R.: 1.8377950<br />time: 2020-05-25<br />Mean.R.: 1.6675805","Quantile.0.025.R.: 1.0602608<br />Quantile.0.975.R.: 1.3392790<br />time: 2020-05-24<br />Mean.R.: 1.1946458","Quantile.0.025.R.: 0.9616257<br />Quantile.0.975.R.: 1.2364616<br />time: 2020-05-23<br />Mean.R.: 1.0940485","Quantile.0.025.R.: 0.8262276<br />Quantile.0.975.R.: 1.0874061<br />time: 2020-05-22<br />Mean.R.: 0.9530689","Quantile.0.025.R.: 0.7354786<br />Quantile.0.975.R.: 0.9817566<br />time: 2020-05-21<br />Mean.R.: 0.8535386","Quantile.0.025.R.: 0.6747282<br />Quantile.0.975.R.: 0.9068626<br />time: 2020-05-20<br />Mean.R.: 0.7856577","Quantile.0.025.R.: 0.6916410<br />Quantile.0.975.R.: 0.9325158<br />time: 2020-05-19<br />Mean.R.: 0.8058417","Quantile.0.025.R.: 0.5473804<br />Quantile.0.975.R.: 0.7433088<br />time: 2020-05-18<br />Mean.R.: 0.6410180","Quantile.0.025.R.: 0.5869924<br />Quantile.0.975.R.: 0.7748467<br />time: 2020-05-17<br />Mean.R.: 0.6771778","Quantile.0.025.R.: 0.6891467<br />Quantile.0.975.R.: 0.8804162<br />time: 2020-05-16<br />Mean.R.: 0.7819685","Quantile.0.025.R.: 0.7788237<br />Quantile.0.975.R.: 0.9762305<br />time: 2020-05-15<br />Mean.R.: 0.8751148","Quantile.0.025.R.: 0.8456006<br />Quantile.0.975.R.: 1.0509977<br />time: 2020-05-14<br />Mean.R.: 0.9454069","Quantile.0.025.R.: 0.8179351<br />Quantile.0.975.R.: 1.0179848<br />time: 2020-05-13<br />Mean.R.: 0.9160576","Quantile.0.025.R.: 0.8321185<br />Quantile.0.975.R.: 1.0322116<br />time: 2020-05-12<br />Mean.R.: 0.9290300","Quantile.0.025.R.: 0.8745878<br />Quantile.0.975.R.: 1.0768140<br />time: 2020-05-11<br />Mean.R.: 0.9732191","Quantile.0.025.R.: 0.8326198<br />Quantile.0.975.R.: 1.0270650<br />time: 2020-05-10<br />Mean.R.: 0.9266459","Quantile.0.025.R.: 0.8106152<br />Quantile.0.975.R.: 1.0053367<br />time: 2020-05-09<br />Mean.R.: 0.9044991","Quantile.0.025.R.: 0.9240157<br />Quantile.0.975.R.: 1.1268418<br />time: 2020-05-08<br />Mean.R.: 1.0226050","Quantile.0.025.R.: 0.9161843<br />Quantile.0.975.R.: 1.1236676<br />time: 2020-05-07<br />Mean.R.: 1.0180885","Quantile.0.025.R.: 0.9182078<br />Quantile.0.975.R.: 1.1253207<br />time: 2020-05-06<br />Mean.R.: 1.0188345","Quantile.0.025.R.: 0.8592428<br />Quantile.0.975.R.: 1.0609502<br />time: 2020-05-05<br />Mean.R.: 0.9574520","Quantile.0.025.R.: 0.8688446<br />Quantile.0.975.R.: 1.0731635<br />time: 2020-05-04<br />Mean.R.: 0.9682562","Quantile.0.025.R.: 0.8637956<br />Quantile.0.975.R.: 1.0717848<br />time: 2020-05-03<br />Mean.R.: 0.9637587","Quantile.0.025.R.: 0.7654997<br />Quantile.0.975.R.: 0.9724094<br />time: 2020-05-02<br />Mean.R.: 0.8643322","Quantile.0.025.R.: 0.6044311<br />Quantile.0.975.R.: 0.7777185<br />time: 2020-05-01<br />Mean.R.: 0.6877461","Quantile.0.025.R.: 0.6276561<br />Quantile.0.975.R.: 0.7962687<br />time: 2020-04-30<br />Mean.R.: 0.7091883","Quantile.0.025.R.: 0.6714153<br />Quantile.0.975.R.: 0.8410870<br />time: 2020-04-29<br />Mean.R.: 0.7531143","Quantile.0.025.R.: 0.6944583<br />Quantile.0.975.R.: 0.8589725<br />time: 2020-04-28<br />Mean.R.: 0.7740855","Quantile.0.025.R.: 0.7102026<br />Quantile.0.975.R.: 0.8797261<br />time: 2020-04-27<br />Mean.R.: 0.7927585","Quantile.0.025.R.: 0.6601141<br />Quantile.0.975.R.: 0.8166829<br />time: 2020-04-26<br />Mean.R.: 0.7356186","Quantile.0.025.R.: 0.7098234<br />Quantile.0.975.R.: 0.8764041<br />time: 2020-04-25<br />Mean.R.: 0.7901778","Quantile.0.025.R.: 0.6784668<br />Quantile.0.975.R.: 0.8455928<br />time: 2020-04-24<br />Mean.R.: 0.7583111","Quantile.0.025.R.: 0.5942424<br />Quantile.0.975.R.: 0.7448495<br />time: 2020-04-23<br />Mean.R.: 0.6666448","Quantile.0.025.R.: 0.5937043<br />Quantile.0.975.R.: 0.7394879<br />time: 2020-04-22<br />Mean.R.: 0.6633092","Quantile.0.025.R.: 0.5761593<br />Quantile.0.975.R.: 0.7038193<br />time: 2020-04-21<br />Mean.R.: 0.6381799","Quantile.0.025.R.: 0.6575205<br />Quantile.0.975.R.: 0.7834819<br />time: 2020-04-20<br />Mean.R.: 0.7188962","Quantile.0.025.R.: 0.7183141<br />Quantile.0.975.R.: 0.8410324<br />time: 2020-04-19<br />Mean.R.: 0.7784389","Quantile.0.025.R.: 0.7421811<br />Quantile.0.975.R.: 0.8568592<br />time: 2020-04-18<br />Mean.R.: 0.7984095","Quantile.0.025.R.: 0.8472752<br />Quantile.0.975.R.: 0.9673500<br />time: 2020-04-17<br />Mean.R.: 0.9068176","Quantile.0.025.R.: 0.8792753<br />Quantile.0.975.R.: 1.0014619<br />time: 2020-04-16<br />Mean.R.: 0.9395950","Quantile.0.025.R.: 0.8540839<br />Quantile.0.975.R.: 0.9710522<br />time: 2020-04-15<br />Mean.R.: 0.9116632","Quantile.0.025.R.: 0.9137722<br />Quantile.0.975.R.: 1.0346071<br />time: 2020-04-14<br />Mean.R.: 0.9737809","Quantile.0.025.R.: 0.9060784<br />Quantile.0.975.R.: 1.0256873<br />time: 2020-04-13<br />Mean.R.: 0.9652441","Quantile.0.025.R.: 0.8907050<br />Quantile.0.975.R.: 1.0088544<br />time: 2020-04-12<br />Mean.R.: 0.9484563","Quantile.0.025.R.: 0.9008145<br />Quantile.0.975.R.: 1.0224190<br />time: 2020-04-11<br />Mean.R.: 0.9610111","Quantile.0.025.R.: 0.8360037<br />Quantile.0.975.R.: 0.9466227<br />time: 2020-04-10<br />Mean.R.: 0.8904396","Quantile.0.025.R.: 0.8997722<br />Quantile.0.975.R.: 1.0119227<br />time: 2020-04-09<br />Mean.R.: 0.9552280","Quantile.0.025.R.: 0.9947541<br />Quantile.0.975.R.: 1.1156045<br />time: 2020-04-08<br />Mean.R.: 1.0544178","Quantile.0.025.R.: 0.9967947<br />Quantile.0.975.R.: 1.1167797<br />time: 2020-04-07<br />Mean.R.: 1.0554786","Quantile.0.025.R.: 0.9737137<br />Quantile.0.975.R.: 1.0930135<br />time: 2020-04-06<br />Mean.R.: 1.0324885","Quantile.0.025.R.: 1.0132098<br />Quantile.0.975.R.: 1.1351961<br />time: 2020-04-05<br />Mean.R.: 1.0732998","Quantile.0.025.R.: 1.0017627<br />Quantile.0.975.R.: 1.1252880<br />time: 2020-04-04<br />Mean.R.: 1.0630746","Quantile.0.025.R.: 1.0400438<br />Quantile.0.975.R.: 1.1672203<br />time: 2020-04-03<br />Mean.R.: 1.1024146","Quantile.0.025.R.: 0.9553537<br />Quantile.0.975.R.: 1.0773417<br />time: 2020-04-02<br />Mean.R.: 1.0151657","Quantile.0.025.R.: 0.9827700<br />Quantile.0.975.R.: 1.1071200<br />time: 2020-04-01<br />Mean.R.: 1.0437622","Quantile.0.025.R.: 1.0267790<br />Quantile.0.975.R.: 1.1549632<br />time: 2020-03-31<br />Mean.R.: 1.0896357","Quantile.0.025.R.: 0.9965629<br />Quantile.0.975.R.: 1.1272105<br />time: 2020-03-30<br />Mean.R.: 1.0609012","Quantile.0.025.R.: 1.0794724<br />Quantile.0.975.R.: 1.2223765<br />time: 2020-03-29<br />Mean.R.: 1.1495278","Quantile.0.025.R.: 1.0857555<br />Quantile.0.975.R.: 1.2343448<br />time: 2020-03-28<br />Mean.R.: 1.1590561","Quantile.0.025.R.: 1.1275347<br />Quantile.0.975.R.: 1.2955192<br />time: 2020-03-27<br />Mean.R.: 1.2100624","Quantile.0.025.R.: 1.2289392<br />Quantile.0.975.R.: 1.4025321<br />time: 2020-03-26<br />Mean.R.: 1.3141639","Quantile.0.025.R.: 1.1474031<br />Quantile.0.975.R.: 1.3184064<br />time: 2020-03-25<br />Mean.R.: 1.2308476","Quantile.0.025.R.: 1.1235867<br />Quantile.0.975.R.: 1.3105205<br />time: 2020-03-24<br />Mean.R.: 1.2146669","Quantile.0.025.R.: 1.2268307<br />Quantile.0.975.R.: 1.4310445<br />time: 2020-03-23<br />Mean.R.: 1.3262263","Quantile.0.025.R.: 1.1476707<br />Quantile.0.975.R.: 1.3935623<br />time: 2020-03-22<br />Mean.R.: 1.2663216","Quantile.0.025.R.: 1.4224246<br />Quantile.0.975.R.: 1.7356309<br />time: 2020-03-21<br />Mean.R.: 1.5726284","Quantile.0.025.R.: 1.4433519<br />Quantile.0.975.R.: 1.8054783<br />time: 2020-03-20<br />Mean.R.: 1.6165350","Quantile.0.025.R.: 1.5286582<br />Quantile.0.975.R.: 1.9539500<br />time: 2020-03-19<br />Mean.R.: 1.7308790","Quantile.0.025.R.: 1.6162927<br />Quantile.0.975.R.: 2.1291825<br />time: 2020-03-18<br />Mean.R.: 1.8585707","Quantile.0.025.R.: 1.7784752<br />Quantile.0.975.R.: 2.4208253<br />time: 2020-03-17<br />Mean.R.: 2.0802860","Quantile.0.025.R.: 2.0265222<br />Quantile.0.975.R.: 2.8549189<br />time: 2020-03-16<br />Mean.R.: 2.4160791","Quantile.0.025.R.: 2.7285506<br />Quantile.0.975.R.: 3.5234189<br />time: 2020-03-15<br />Mean.R.: 3.1044139","Quantile.0.025.R.: 1.3568059<br />Quantile.0.975.R.: 1.9055364<br />time: 2020-03-14<br />Mean.R.: 1.6211409","Quantile.0.025.R.: 1.1515593<br />Quantile.0.975.R.: 1.6911376<br />time: 2020-03-13<br />Mean.R.: 1.4061652","Quantile.0.025.R.: 1.1175666<br />Quantile.0.975.R.: 1.6797134<br />time: 2020-03-12<br />Mean.R.: 1.3844873","Quantile.0.025.R.: 1.1889102<br />Quantile.0.975.R.: 1.8146252<br />time: 2020-03-11<br />Mean.R.: 1.4819493","Quantile.0.025.R.: 1.2686322<br />Quantile.0.975.R.: 1.9994148<br />time: 2020-03-10<br />Mean.R.: 1.6101893","Quantile.0.025.R.: 1.2686322<br />Quantile.0.975.R.: 1.9994148<br />time: 2020-03-10<br />Mean.R.: 1.6101893"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"transparent","dash":"solid"},"fill":"toself","fillcolor":"rgba(70,130,180,0.3)","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":48.1461187214612,"r":7.30593607305936,"b":44.5662100456621,"l":31.4155251141553},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Daily Effective Reproduction Number<br><sup>SI adjusted for uncertainty<\/sup>","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[18327.15,18411.85],"tickmode":"array","ticktext":["Mar 15","Apr 01","Apr 15","May 01","May 15"],"tickvals":[18336,18353,18367,18383,18397],"categoryorder":"array","categoryarray":["Mar 15","Apr 01","Apr 15","May 01","May 15"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Time","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.398578442561806,3.6722207879311],"tickmode":"array","ticktext":["1","2","3"],"tickvals":[1,2,3],"categoryorder":"array","categoryarray":["1","2","3"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"R","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"4677445e6815":{"x":{},"y":{},"type":"scatter"},"467712035dc4":{"ymin":{},"ymax":{},"x":{},"y":{}}},"cur_data":"4677445e6815","visdat":{"4677445e6815":["function (y) ","x"],"467712035dc4":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 2: Click on the chart to engage its interactive mode. <em>Ribbon</em> 95% CI of the mean <span class="math inline">\(R_e\)</span>.
+</p>
+</div>
+</div>
+<p>It appears that by March 22, four days after the commencement of the Movement Control Order instituted by the Government of Malaysia, the mean <span class="math inline">\(R_e\)</span> was down to 1.26, a remarkable drop from the peak mean <span class="math inline">\(R_e\)</span> of 3.09 on March 15.</p>
+<p>However, the latter part of the <span class="math inline">\(R_e\)</span> curve has risen to more than 1 since May 23. While this rise may well be due to increased positive screens among foreigners held at a few immigration holding facilities throughout the country for various immigration offences; this is in turn part of the more proactive effort in case-finding by the Ministry of Health of Malaysia. Malaysians must not be complacent.</p>
+<h2 class="appendix" id="source-code">Source code</h2>
+<p>Available at <a href="https://github.com/aaimsco/rpubs" class="uri">https://github.com/aaimsco/rpubs</a></p>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom">
+<h3 id="updates-and-corrections">Corrections</h3>
+<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/aaimsco/rpubs/issues/new">create an issue</a> on the source repository.</p>
+<h3 id="reuse">Reuse</h3>
+<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/aaimsco/rpubs">https://github.com/aaimsco/rpubs</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
+</div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
