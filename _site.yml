@@ -13,17 +13,14 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
-    - text: "Publish"
+    - text: "Data Science"
       menu:
         - text: "The Onslaught"
           href: trialdistill2.html
-        - text: "Curvebender"
+        - text: "Curvebending"
           href: curvebenders.html
-        - text: "---"
-        - text: "Article Metadata"
-          href: metadata.html
+    - text: "About"
+      href: about.html
     - icon: fab fa-github
       href: https://github.com/aaimsco/rpubs
 output: distill::distill_article

@@ -138,7 +138,7 @@ fig %>%
 
 ## Estimates of $R_0$
 
-### $R_0$ from regression slope
+### $R_0$ from exponential growth phase of epidemic curve
 
 ```{r message=FALSE, echo=FALSE, warning=FALSE}
 logdata2 <- log(data$dailynew[1:21])

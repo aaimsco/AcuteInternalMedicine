@@ -1,7 +1,7 @@
 ---
 title: "About this site"
 description: |
-  Some additional details about the website
+  An Advanced Acute internal Medicine Society of Malaysia's website
 ---
 
 ```{r setup, include=FALSE}
