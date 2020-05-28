@@ -13,10 +13,12 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "Data Science"
+    - text: "Quick Takes"
       menu:
         - text: "The Onslaught"
           href: trialdistill2.html
+        - text: "New Cases"
+          href: msia_covid_b.html
         - text: "Curvebending"
           href: curvebenders.html
         - text: "ILI/SARI"
