@@ -19,6 +19,8 @@ navbar:
           href: trialdistill2.html
         - text: "Curvebending"
           href: curvebenders.html
+        - text: "ILI/SARI"
+          href: ilisari.html
     - text: "About"
       href: about.html
     - icon: fab fa-github

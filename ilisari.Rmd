@@ -1,0 +1,55 @@
+---
+title: "ILI/SARI New Cases"
+description: 
+  Epidemic Curve with Moving Averages on ILI/SARI Cases
+author:
+  - name: Dr Saiful Safuan Md Sani 
+    url: https://saifulsafuan.com
+    affiliation: Advanced Acute Internal Medicine Society Malaysia & Department of Medicine Hospital Kuala Lumpur
+    affiliation_url: https://aaims.co
+date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+---
+### "To bring the pandemic to an end countries have to bend the curve – they have to achieve a plateau then decline in the number of daily cases." - [Our World in Data](https://ourworldindata.org/coronavirus#are-countries-bending-the-curve) 
+
+### ***The chart below illustrates that a 10-day period is the best time frame to use to decide on the effectiveness of the MCO strategy in Malaysia.***
+
+```{r message=FALSE, echo=FALSE}
+library(plotly)
+library(shiny)
+library(googlesheets)
+library(gsheet)
+```
+```{r message=FALSE, echo=FALSE}
+url <- 'https://docs.google.com/spreadsheets/d/1lUQGdg5NyDIcQIfZ_hsT6VX_L9MPmLMWF4thEQqimcs/edit?usp=sharing'
+data <- gsheet2tbl(url)
+```
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+p <- plot_ly(data, x = ~date, y = ~new_ilisari, type = 'bar', name = 'New ILI/SARI cases confirmed each day',
+        marker = list(color = 'rgb(55, 83, 109)')) %>%
+  add_trace(y = ~SMA10, name = '10-day Moving averages', mode = "lines", type = "scatter", marker = list(color = 'rgb(255,125,0)')) %>%
+  add_trace(y = ~SMA5, name = '5-day Moving averages', mode = "lines", line = list(color = 'rgb(255,223,0)'), type = "scatter", marker = list(color = 'rgb(255,223,0)')) %>%
+  layout(title = 'New ILI/SARI cases confirmed each day',
+         xaxis = list(
+           title = "",
+           tickformat = "%b %d",
+           tickfont = list(
+             size = 14,
+             color = 'rgb(107, 107, 107)')),
+         yaxis = list(
+           title = 'Confirmed new ILISARI cases',
+           titlefont = list(
+             size = 16,
+             color = 'rgb(107, 107, 107)'),
+           tickfont = list(
+             size = 14,
+             color = 'rgb(107, 107, 107)')),
+         legend = list(x = 0.5, y = 0.9, bgcolor = 'rgba(255, 255, 255, 0)', bordercolor = 'rgba(255, 255, 255, 0)'),
+         barmode = 'group', bargap = 0.15, bargroupgap = 0.1)
+p
+```

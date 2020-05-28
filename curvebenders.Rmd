@@ -132,3 +132,6 @@ However, the latter part of the $R_e$ curve has risen to more than 1 since May 2
 
 Available at https://github.com/aaimsco/rpubs
 
+## Full article {.appendix}
+
+Available at https://rpubs.com/saiful 
