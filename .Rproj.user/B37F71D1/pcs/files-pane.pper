@@ -2,7 +2,7 @@
     "path" : "~/Documents/COVID/rpubs",
     "sortOrder" : [
         {
-            "ascending" : true,
+            "ascending" : false,
             "columnIndex" : 2
         }
     ]
