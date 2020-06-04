@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+  <!--radix_placeholder_meta_tags-->
+  <title>COVID-19 in Malaysia: Daily Effective Reproduction Number</title>
+
+  <meta property="description" itemprop="description" content="Quick take on the COVID-19 pandemic progress in Malaysia."/>
+
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2020-06-05"/>
+  <meta property="article:created" itemprop="dateCreated" content="2020-06-05"/>
+  <meta name="article:author" content="Dr Saiful Safuan Md Sani"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="COVID-19 in Malaysia: Daily Effective Reproduction Number"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Quick take on the COVID-19 pandemic progress in Malaysia."/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="COVID-19 in Malaysia"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="COVID-19 in Malaysia: Daily Effective Reproduction Number"/>
+  <meta property="twitter:description" content="Quick take on the COVID-19 pandemic progress in Malaysia."/>
+  <meta property="twitter:site" content="@dcicantab51"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Daily Effective Reproduction Number"]},{"type":"character","attributes":{},"value":["Quick take on the COVID-19 pandemic progress in Malaysia.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Dr Saiful Safuan Md Sani"]},{"type":"character","attributes":{},"value":["https://saifulsafuan.com"]},{"type":"character","attributes":{},"value":["Advanced Acute Internal Medicine Society Malaysia & Department of Medicine Hospital Kuala Lumpur"]},{"type":"character","attributes":{},"value":["https://aaims.co"]}]}]},{"type":"character","attributes":{},"value":["2020-06-05"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  <!--radix_placeholder_navigation_in_header-->
+
+  <script type="application/javascript">
+
+    window.headroom_prevent_pin = false;
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+
+  /* Theme (user-documented overrideables for nav appearance) */
+
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #455a64;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: white;
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .distill-site-header {
+
+  }
+
+  .distill-site-footer {
+
+  }
+
+
+  /* Site Header */
+
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+
+
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+
+  .distill-site-header .title {
+    font-size: 18px;
+  }
+
+  .distill-site-header .logo {
+    padding: 0;
+  }
+
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+
+
+
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+
+
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative;}
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Site Footer */
+
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Headroom */
+
+  d-title {
+    padding-top: 6rem;
+  }
+
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .headroom--unpinned {
+    top: -100px;
+  }
+
+  .headroom--pinned {
+    top: 0;
+  }
+
+  </style>
+
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for table of contents */
+
+  .d-toc {
+    color: rgba(0,0,0,0.8);
+    font-size: 0.8em;
+    line-height: 1em;
+  }
+
+  .d-toc-header {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 1.3em;
+  }
+
+  .d-toc a {
+    border-bottom: none;
+  }
+
+  .d-toc ul {
+    padding-left: 0;
+  }
+
+  .d-toc li>ul {
+    padding-top: 0.8em;
+    padding-left: 16px;
+    margin-bottom: 0.6em;
+  }
+
+  .d-toc ul,
+  .d-toc li {
+    list-style-type: none;
+  }
+
+  .d-toc li {
+    margin-bottom: 0.9em;
+  }
+
+  .d-toc-separator {
+    margin-top: 20px;
+    margin-bottom: 2em;
+  }
+
+  .d-article-with-toc {
+    border-top: none;
+    padding-top: 0;
+  }
+
+
+
+  /* Tweak code blocks (note that this CSS is repeated above in an injection
+     into the d-code shadow dom) */
+
+  d-code {
+    overflow-x: auto !important;
+  }
+
+  pre.d-code code.d-code {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  pre.text-output {
+
+    font-size: 12px;
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  @media(min-width: 768px) {
+
+  d-code {
+    overflow-x: visible !important;
+  }
+
+  pre.d-code code.d-code  {
+      padding-left: 18px;
+      font-size: 14px;
+  }
+  pre.text-output {
+    font-size: 14px;
+  }
+  }
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // create d-bibliography
+    var bibliography = $('<d-bibliography></d-bibliography>');
+    $('#distill-bibliography').wrap(bibliography);
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace citations with <d-cite>
+    $('.citation').each(function(i, val) {
+      appendix = true;
+      var cites = $(this).attr('data-cites').split(" ");
+      var dt_cite = $('<d-cite></d-cite>');
+      dt_cite.attr('key', cites.join());
+      $(this).replaceWith(dt_cite);
+    });
+    // remove refs
+    $('#refs').remove();
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-toc a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // replace code blocks with d-code
+    $('pre>code').each(function(i, val) {
+      var code = $(this);
+      var pre = code.parent();
+      var clz = "";
+      var language = pre.attr('class');
+      if (language) {
+        // map unknown languages to "clike" (without this they just dissapear)
+        if ($.inArray(language, ["bash", "clike", "css", "go", "html",
+                                 "javascript", "js", "julia", "lua", "markdown",
+                                 "markup", "mathml", "python", "svg", "xml"]) == -1)
+          language = "clike";
+        language = ' language="' + language + '"';
+        var dt_code = $('<d-code block' + language + clz + '></d-code>');
+        dt_code.text(code.text());
+        pre.replaceWith(dt_code);
+      } else {
+        code.addClass('text-output').unwrap().changeElementType('pre');
+      }
+    });
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('d-code, pre.text-output, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // table of contents
+      if (have_authors) // adjust border if we are in authors
+        $('.d-toc').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // inject pre code styles (can't do this with a global stylesheet b/c a shadow root is used)
+      $('d-code').each(function(i, val) {
+        var style = document.createElement('style');
+        style.innerHTML = 'pre code { padding-left: 10px; font-size: 12px; border-left: 2px solid rgba(0,0,0,0.1); } ' +
+                          '@media(min-width: 768px) { pre code { padding-left: 18px; font-size: 14px; } }';
+        if (this.shadowRoot)
+          this.shadowRoot.appendChild(style);
+      });
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-toc-header').remove();
+    $('.d-toc').remove();
+    $('.d-toc-separator').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="site_libs/elevate-section-attrs-2.0/elevate-section-attrs.js"></script>
+  <script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+  <script src="site_libs/plotly-binding-4.9.2.1/plotly.js"></script>
+  <script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+  <link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+  <script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+  <link href="site_libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+  <script src="site_libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98890761-11"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-98890761-11');
+  </script>
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Daily Effective Reproduction Number","description":"Quick take on the COVID-19 pandemic progress in Malaysia.","authors":[{"author":"Dr Saiful Safuan Md Sani","authorURL":"https://saifulsafuan.com","affiliation":"Advanced Acute Internal Medicine Society Malaysia & Department of Medicine Hospital Kuala Lumpur","affiliationURL":"https://aaims.co"}],"publishedDate":"2020-06-05T00:00:00.000+08:00","citationText":"Sani, 2020"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">COVID-19 in Malaysia</a>
+</div>
+<div class="nav-right">
+<a href="index.html">Home</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Quick Takes
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="trialdistill2.html">The Onslaught</a>
+<a href="msia_covid_b.html">New Cases</a>
+<a href="ilisari.htmL">ILI/SARI</a>
+<a href="curvebenders.html">Curvebending</a>
+<a href="reff.html">Daily Reff</a>
+</div>
+</div>
+<a href="about.html">About</a>
+<a href="https://github.com/aaimsco/rpubs">
+<i class="fab fa-github"></i>
+</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Daily Effective Reproduction Number</h1>
+<p><p>Quick take on the COVID-19 pandemic progress in Malaysia.</p></p>
+</div>
+
+<div class="d-byline">
+  Dr Saiful Safuan Md Sani <a href="https://saifulsafuan.com" class="uri">https://saifulsafuan.com</a> (Advanced Acute Internal Medicine Society Malaysia &amp; Department of Medicine Hospital Kuala Lumpur)<a href="https://aaims.co" class="uri">https://aaims.co</a>
+  
+<br/>2020-06-05
+</div>
+
+<div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:unnamed-chunk-4"></span>
+<div id="htmlwidget-d9a03a05d1d9204f3a1f" style="width:768px;height:384px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d9a03a05d1d9204f3a1f">{"x":{"data":[{"x":[18331,18332,18333,18334,18335,18336,18337,18338,18339,18340,18341,18342,18343,18344,18345,18346,18347,18348,18349,18350,18351,18352,18353,18354,18355,18356,18357,18358,18359,18360,18361,18362,18363,18364,18365,18366,18367,18368,18369,18370,18371,18372,18373,18374,18375,18376,18377,18378,18379,18380,18381,18382,18383,18384,18385,18386,18387,18388,18389,18390,18391,18392,18393,18394,18395,18396,18397,18398,18399,18400,18401,18402,18403,18404,18405,18406,18407,18408,18409,18410,18411,18412,18413,18414,18415,18416,18417],"y":[1.59688575258138,1.47668635155292,1.37850927615991,1.40389882201356,1.61889294549857,3.09209471633171,2.39725019224662,2.06649430055767,1.84629858264452,1.72112530124078,1.60940049779836,1.56623929203128,1.26124009364361,1.3221602974767,1.21144565965363,1.2287726491792,1.31199415060404,1.20686220240288,1.15686338201443,1.14895707777941,1.05950666579912,1.08952494087068,1.04303052749656,1.01461794346757,1.10166791371138,1.06210605692573,1.07269858597999,1.03248300519952,1.05504393958296,1.05384341197303,0.954878144756474,0.890227423838649,0.961926451045535,0.949087108368047,0.966180243426987,0.974270422349532,0.912002919638399,0.939937885608768,0.907071379834449,0.798884866557594,0.779209613413874,0.7202928363218,0.639829041100135,0.665628898182028,0.668534344925666,0.761010622896194,0.792232614626373,0.736738429482498,0.794668337158383,0.775032106163035,0.754256853950604,0.710492273951509,0.689112160628421,0.866955648630406,0.964947893447457,0.9694076275948,0.957394240973865,1.01923227668189,1.01770762738049,1.02294479631506,0.90423695472098,0.927129685644404,0.973457360039166,0.92851611245144,0.917050342595507,0.945377725382571,0.875794691420886,0.782589803136964,0.678721056455444,0.642807781961734,0.808150196223534,0.787275466581272,0.854907897491736,0.953897117220278,1.09394159744792,1.19450359347748,1.66542062997598,1.80158346348811,1.38826496643266,1.17122491030574,1.23782071211398,1.13601905677997,1.09595930488104,0.767673691526056,0.466472312411141,0.81966772763953,1.64145144640966],"text":["Time: 2020-03-10<br />Mean_R: 1.5968858","Time: 2020-03-11<br />Mean_R: 1.4766864","Time: 2020-03-12<br />Mean_R: 1.3785093","Time: 2020-03-13<br />Mean_R: 1.4038988","Time: 2020-03-14<br />Mean_R: 1.6188929","Time: 2020-03-15<br />Mean_R: 3.0920947","Time: 2020-03-16<br />Mean_R: 2.3972502","Time: 2020-03-17<br />Mean_R: 2.0664943","Time: 2020-03-18<br />Mean_R: 1.8462986","Time: 2020-03-19<br />Mean_R: 1.7211253","Time: 2020-03-20<br />Mean_R: 1.6094005","Time: 2020-03-21<br />Mean_R: 1.5662393","Time: 2020-03-22<br />Mean_R: 1.2612401","Time: 2020-03-23<br />Mean_R: 1.3221603","Time: 2020-03-24<br />Mean_R: 1.2114457","Time: 2020-03-25<br />Mean_R: 1.2287726","Time: 2020-03-26<br />Mean_R: 1.3119942","Time: 2020-03-27<br />Mean_R: 1.2068622","Time: 2020-03-28<br />Mean_R: 1.1568634","Time: 2020-03-29<br />Mean_R: 1.1489571","Time: 2020-03-30<br />Mean_R: 1.0595067","Time: 2020-03-31<br />Mean_R: 1.0895249","Time: 2020-04-01<br />Mean_R: 1.0430305","Time: 2020-04-02<br />Mean_R: 1.0146179","Time: 2020-04-03<br />Mean_R: 1.1016679","Time: 2020-04-04<br />Mean_R: 1.0621061","Time: 2020-04-05<br />Mean_R: 1.0726986","Time: 2020-04-06<br />Mean_R: 1.0324830","Time: 2020-04-07<br />Mean_R: 1.0550439","Time: 2020-04-08<br />Mean_R: 1.0538434","Time: 2020-04-09<br />Mean_R: 0.9548781","Time: 2020-04-10<br />Mean_R: 0.8902274","Time: 2020-04-11<br />Mean_R: 0.9619265","Time: 2020-04-12<br />Mean_R: 0.9490871","Time: 2020-04-13<br />Mean_R: 0.9661802","Time: 2020-04-14<br />Mean_R: 0.9742704","Time: 2020-04-15<br />Mean_R: 0.9120029","Time: 2020-04-16<br />Mean_R: 0.9399379","Time: 2020-04-17<br />Mean_R: 0.9070714","Time: 2020-04-18<br />Mean_R: 0.7988849","Time: 2020-04-19<br />Mean_R: 0.7792096","Time: 2020-04-20<br />Mean_R: 0.7202928","Time: 2020-04-21<br />Mean_R: 0.6398290","Time: 2020-04-22<br />Mean_R: 0.6656289","Time: 2020-04-23<br />Mean_R: 0.6685343","Time: 2020-04-24<br />Mean_R: 0.7610106","Time: 2020-04-25<br />Mean_R: 0.7922326","Time: 2020-04-26<br />Mean_R: 0.7367384","Time: 2020-04-27<br />Mean_R: 0.7946683","Time: 2020-04-28<br />Mean_R: 0.7750321","Time: 2020-04-29<br />Mean_R: 0.7542569","Time: 2020-04-30<br />Mean_R: 0.7104923","Time: 2020-05-01<br />Mean_R: 0.6891122","Time: 2020-05-02<br />Mean_R: 0.8669556","Time: 2020-05-03<br />Mean_R: 0.9649479","Time: 2020-05-04<br />Mean_R: 0.9694076","Time: 2020-05-05<br />Mean_R: 0.9573942","Time: 2020-05-06<br />Mean_R: 1.0192323","Time: 2020-05-07<br />Mean_R: 1.0177076","Time: 2020-05-08<br />Mean_R: 1.0229448","Time: 2020-05-09<br />Mean_R: 0.9042370","Time: 2020-05-10<br />Mean_R: 0.9271297","Time: 2020-05-11<br />Mean_R: 0.9734574","Time: 2020-05-12<br />Mean_R: 0.9285161","Time: 2020-05-13<br />Mean_R: 0.9170503","Time: 2020-05-14<br />Mean_R: 0.9453777","Time: 2020-05-15<br />Mean_R: 0.8757947","Time: 2020-05-16<br />Mean_R: 0.7825898","Time: 2020-05-17<br />Mean_R: 0.6787211","Time: 2020-05-18<br />Mean_R: 0.6428078","Time: 2020-05-19<br />Mean_R: 0.8081502","Time: 2020-05-20<br />Mean_R: 0.7872755","Time: 2020-05-21<br />Mean_R: 0.8549079","Time: 2020-05-22<br />Mean_R: 0.9538971","Time: 2020-05-23<br />Mean_R: 1.0939416","Time: 2020-05-24<br />Mean_R: 1.1945036","Time: 2020-05-25<br />Mean_R: 1.6654206","Time: 2020-05-26<br />Mean_R: 1.8015835","Time: 2020-05-27<br />Mean_R: 1.3882650","Time: 2020-05-28<br />Mean_R: 1.1712249","Time: 2020-05-29<br />Mean_R: 1.2378207","Time: 2020-05-30<br />Mean_R: 1.1360191","Time: 2020-05-31<br />Mean_R: 1.0959593","Time: 2020-06-01<br />Mean_R: 0.7676737","Time: 2020-06-02<br />Mean_R: 0.4664723","Time: 2020-06-03<br />Mean_R: 0.8196677","Time: 2020-06-04<br />Mean_R: 1.6414514"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(70,130,180,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[18331,18332,18333,18334,18335,18336,18337,18338,18339,18340,18341,18342,18343,18344,18345,18346,18347,18348,18349,18350,18351,18352,18353,18354,18355,18356,18357,18358,18359,18360,18361,18362,18363,18364,18365,18366,18367,18368,18369,18370,18371,18372,18373,18374,18375,18376,18377,18378,18379,18380,18381,18382,18383,18384,18385,18386,18387,18388,18389,18390,18391,18392,18393,18394,18395,18396,18397,18398,18399,18400,18401,18402,18403,18404,18405,18406,18407,18408,18409,18410,18411,18412,18413,18414,18415,18416,18417,18417,18417,18416,18415,18414,18413,18412,18411,18410,18409,18408,18407,18406,18405,18404,18403,18402,18401,18400,18399,18398,18397,18396,18395,18394,18393,18392,18391,18390,18389,18388,18387,18386,18385,18384,18383,18382,18381,18380,18379,18378,18377,18376,18375,18374,18373,18372,18371,18370,18369,18368,18367,18366,18365,18364,18363,18362,18361,18360,18359,18358,18357,18356,18355,18354,18353,18352,18351,18350,18349,18348,18347,18346,18345,18344,18343,18342,18341,18340,18339,18338,18337,18336,18335,18334,18333,18332,18331,18331],"y":[1.25978066587024,1.18251509244757,1.11452771255479,1.1502503494928,1.35567484774553,2.71715900744713,2.02277944003646,1.78227604650909,1.61861903018096,1.52806610102716,1.44600772276299,1.41986993842702,1.1456382227727,1.22476040600205,1.12094923473315,1.14603012987766,1.22788185827658,1.12627791456303,1.08356668323912,1.07904285541716,0.994359567146014,1.02544594030506,0.982307028186856,0.955456122384289,1.03841993038306,1.00177219727779,1.0126582269176,0.973750741071233,0.996035513512356,0.994661965780093,0.899683371335978,0.835660495085238,0.902645493531047,0.890615514397195,0.906906481343834,0.915090301574104,0.853849229550656,0.879928649353019,0.848195688991852,0.743314538962701,0.718410094030579,0.659281343231743,0.578542927265066,0.596350250269215,0.596950357561679,0.681331713085624,0.712226144476324,0.661384516355659,0.712817842984257,0.694062279506801,0.672582153625407,0.629609730192679,0.60448354001514,0.767826655859664,0.863272831274945,0.871113018555111,0.859388267859728,0.917831355172404,0.917775672106134,0.921531990365906,0.810702144603054,0.831527497455896,0.874029356519936,0.831505840831487,0.821260794421494,0.845137771515352,0.779215105759915,0.690221574607414,0.588286874406719,0.547525918638474,0.692557122025134,0.674525764058851,0.735927854876303,0.826664542005994,0.960618721291722,1.05622454006998,1.50270002549873,1.61621203027299,1.23082285962973,1.05369727458974,1.12935878412247,1.03535472394814,1.00169741939959,0.691519707544752,0.403776262032633,0.708162504442953,1.49148791811616,1.49148791811616,1.80049730759106,0.941326579945439,0.533214569437281,0.848512383057579,1.1939383901773,1.24178672171673,1.35337781348956,1.29886779120956,1.56154211167892,2.00246678205477,1.83419469832251,1.33875687168384,1.23554847481475,1.0896009585145,0.981367691911265,0.906774622305041,0.933303302776366,0.745599299056798,0.775476399154673,0.881702589648383,0.977950198466667,1.05033274966544,1.01876221749575,1.03095363121621,1.07652183734338,1.02738962679514,1.00227853230148,1.12701931196212,1.123003388432,1.12523650997263,1.06042926425557,1.07424619588334,1.07149005514696,0.973969982211656,0.778596621890121,0.79665529297805,0.841339270152422,0.860724638943375,0.881561422122785,0.815720599240016,0.875032315760486,0.845882787252677,0.745247491182429,0.741682355825961,0.70475843880879,0.783937287623747,0.842423446724004,0.857468055204964,0.968294357438516,1.00171230598322,0.971385344435507,1.03583662901839,1.02801350650667,1.00884937412933,1.02395622375153,0.946153986379728,1.01088103576426,1.11469234250908,1.11596080520402,1.09231180494508,1.13433006888691,1.12486233806127,1.16694286514872,1.07604067833833,1.10610784257239,1.15542259083048,1.12609162637434,1.22177335160035,1.23328728855788,1.2929564830313,1.39994541637791,1.31636655950372,1.30746486840716,1.42768495175305,1.38811871020223,1.72713312766018,1.79416896123143,1.94132397836111,2.1143619235357,2.40729612168048,2.83475888051373,3.50182011416429,1.90423601155364,1.68515242095747,1.67261363808422,1.81055782624687,1.98066597460975,1.25978066587024],"text":["Quantile_0.025: 1.2597807<br />Quantile_0.975: 1.9806660<br />Time: 2020-03-10<br />Mean_R: 1.5968858","Quantile_0.025: 1.1825151<br />Quantile_0.975: 1.8105578<br />Time: 2020-03-11<br />Mean_R: 1.4766864","Quantile_0.025: 1.1145277<br />Quantile_0.975: 1.6726136<br />Time: 2020-03-12<br />Mean_R: 1.3785093","Quantile_0.025: 1.1502503<br />Quantile_0.975: 1.6851524<br />Time: 2020-03-13<br />Mean_R: 1.4038988","Quantile_0.025: 1.3556748<br />Quantile_0.975: 1.9042360<br />Time: 2020-03-14<br />Mean_R: 1.6188929","Quantile_0.025: 2.7171590<br />Quantile_0.975: 3.5018201<br />Time: 2020-03-15<br />Mean_R: 3.0920947","Quantile_0.025: 2.0227794<br />Quantile_0.975: 2.8347589<br />Time: 2020-03-16<br />Mean_R: 2.3972502","Quantile_0.025: 1.7822760<br />Quantile_0.975: 2.4072961<br />Time: 2020-03-17<br />Mean_R: 2.0664943","Quantile_0.025: 1.6186190<br />Quantile_0.975: 2.1143619<br />Time: 2020-03-18<br />Mean_R: 1.8462986","Quantile_0.025: 1.5280661<br />Quantile_0.975: 1.9413240<br />Time: 2020-03-19<br />Mean_R: 1.7211253","Quantile_0.025: 1.4460077<br />Quantile_0.975: 1.7941690<br />Time: 2020-03-20<br />Mean_R: 1.6094005","Quantile_0.025: 1.4198699<br />Quantile_0.975: 1.7271331<br />Time: 2020-03-21<br />Mean_R: 1.5662393","Quantile_0.025: 1.1456382<br />Quantile_0.975: 1.3881187<br />Time: 2020-03-22<br />Mean_R: 1.2612401","Quantile_0.025: 1.2247604<br />Quantile_0.975: 1.4276850<br />Time: 2020-03-23<br />Mean_R: 1.3221603","Quantile_0.025: 1.1209492<br />Quantile_0.975: 1.3074649<br />Time: 2020-03-24<br />Mean_R: 1.2114457","Quantile_0.025: 1.1460301<br />Quantile_0.975: 1.3163666<br />Time: 2020-03-25<br />Mean_R: 1.2287726","Quantile_0.025: 1.2278819<br />Quantile_0.975: 1.3999454<br />Time: 2020-03-26<br />Mean_R: 1.3119942","Quantile_0.025: 1.1262779<br />Quantile_0.975: 1.2929565<br />Time: 2020-03-27<br />Mean_R: 1.2068622","Quantile_0.025: 1.0835667<br />Quantile_0.975: 1.2332873<br />Time: 2020-03-28<br />Mean_R: 1.1568634","Quantile_0.025: 1.0790429<br />Quantile_0.975: 1.2217734<br />Time: 2020-03-29<br />Mean_R: 1.1489571","Quantile_0.025: 0.9943596<br />Quantile_0.975: 1.1260916<br />Time: 2020-03-30<br />Mean_R: 1.0595067","Quantile_0.025: 1.0254459<br />Quantile_0.975: 1.1554226<br />Time: 2020-03-31<br />Mean_R: 1.0895249","Quantile_0.025: 0.9823070<br />Quantile_0.975: 1.1061078<br />Time: 2020-04-01<br />Mean_R: 1.0430305","Quantile_0.025: 0.9554561<br />Quantile_0.975: 1.0760407<br />Time: 2020-04-02<br />Mean_R: 1.0146179","Quantile_0.025: 1.0384199<br />Quantile_0.975: 1.1669429<br />Time: 2020-04-03<br />Mean_R: 1.1016679","Quantile_0.025: 1.0017722<br />Quantile_0.975: 1.1248623<br />Time: 2020-04-04<br />Mean_R: 1.0621061","Quantile_0.025: 1.0126582<br />Quantile_0.975: 1.1343301<br />Time: 2020-04-05<br />Mean_R: 1.0726986","Quantile_0.025: 0.9737507<br />Quantile_0.975: 1.0923118<br />Time: 2020-04-06<br />Mean_R: 1.0324830","Quantile_0.025: 0.9960355<br />Quantile_0.975: 1.1159608<br />Time: 2020-04-07<br />Mean_R: 1.0550439","Quantile_0.025: 0.9946620<br />Quantile_0.975: 1.1146923<br />Time: 2020-04-08<br />Mean_R: 1.0538434","Quantile_0.025: 0.8996834<br />Quantile_0.975: 1.0108810<br />Time: 2020-04-09<br />Mean_R: 0.9548781","Quantile_0.025: 0.8356605<br />Quantile_0.975: 0.9461540<br />Time: 2020-04-10<br />Mean_R: 0.8902274","Quantile_0.025: 0.9026455<br />Quantile_0.975: 1.0239562<br />Time: 2020-04-11<br />Mean_R: 0.9619265","Quantile_0.025: 0.8906155<br />Quantile_0.975: 1.0088494<br />Time: 2020-04-12<br />Mean_R: 0.9490871","Quantile_0.025: 0.9069065<br />Quantile_0.975: 1.0280135<br />Time: 2020-04-13<br />Mean_R: 0.9661802","Quantile_0.025: 0.9150903<br />Quantile_0.975: 1.0358366<br />Time: 2020-04-14<br />Mean_R: 0.9742704","Quantile_0.025: 0.8538492<br />Quantile_0.975: 0.9713853<br />Time: 2020-04-15<br />Mean_R: 0.9120029","Quantile_0.025: 0.8799286<br />Quantile_0.975: 1.0017123<br />Time: 2020-04-16<br />Mean_R: 0.9399379","Quantile_0.025: 0.8481957<br />Quantile_0.975: 0.9682944<br />Time: 2020-04-17<br />Mean_R: 0.9070714","Quantile_0.025: 0.7433145<br />Quantile_0.975: 0.8574681<br />Time: 2020-04-18<br />Mean_R: 0.7988849","Quantile_0.025: 0.7184101<br />Quantile_0.975: 0.8424234<br />Time: 2020-04-19<br />Mean_R: 0.7792096","Quantile_0.025: 0.6592813<br />Quantile_0.975: 0.7839373<br />Time: 2020-04-20<br />Mean_R: 0.7202928","Quantile_0.025: 0.5785429<br />Quantile_0.975: 0.7047584<br />Time: 2020-04-21<br />Mean_R: 0.6398290","Quantile_0.025: 0.5963503<br />Quantile_0.975: 0.7416824<br />Time: 2020-04-22<br />Mean_R: 0.6656289","Quantile_0.025: 0.5969504<br />Quantile_0.975: 0.7452475<br />Time: 2020-04-23<br />Mean_R: 0.6685343","Quantile_0.025: 0.6813317<br />Quantile_0.975: 0.8458828<br />Time: 2020-04-24<br />Mean_R: 0.7610106","Quantile_0.025: 0.7122261<br />Quantile_0.975: 0.8750323<br />Time: 2020-04-25<br />Mean_R: 0.7922326","Quantile_0.025: 0.6613845<br />Quantile_0.975: 0.8157206<br />Time: 2020-04-26<br />Mean_R: 0.7367384","Quantile_0.025: 0.7128178<br />Quantile_0.975: 0.8815614<br />Time: 2020-04-27<br />Mean_R: 0.7946683","Quantile_0.025: 0.6940623<br />Quantile_0.975: 0.8607246<br />Time: 2020-04-28<br />Mean_R: 0.7750321","Quantile_0.025: 0.6725822<br />Quantile_0.975: 0.8413393<br />Time: 2020-04-29<br />Mean_R: 0.7542569","Quantile_0.025: 0.6296097<br />Quantile_0.975: 0.7966553<br />Time: 2020-04-30<br />Mean_R: 0.7104923","Quantile_0.025: 0.6044835<br />Quantile_0.975: 0.7785966<br />Time: 2020-05-01<br />Mean_R: 0.6891122","Quantile_0.025: 0.7678267<br />Quantile_0.975: 0.9739700<br />Time: 2020-05-02<br />Mean_R: 0.8669556","Quantile_0.025: 0.8632728<br />Quantile_0.975: 1.0714901<br />Time: 2020-05-03<br />Mean_R: 0.9649479","Quantile_0.025: 0.8711130<br />Quantile_0.975: 1.0742462<br />Time: 2020-05-04<br />Mean_R: 0.9694076","Quantile_0.025: 0.8593883<br />Quantile_0.975: 1.0604293<br />Time: 2020-05-05<br />Mean_R: 0.9573942","Quantile_0.025: 0.9178314<br />Quantile_0.975: 1.1252365<br />Time: 2020-05-06<br />Mean_R: 1.0192323","Quantile_0.025: 0.9177757<br />Quantile_0.975: 1.1230034<br />Time: 2020-05-07<br />Mean_R: 1.0177076","Quantile_0.025: 0.9215320<br />Quantile_0.975: 1.1270193<br />Time: 2020-05-08<br />Mean_R: 1.0229448","Quantile_0.025: 0.8107021<br />Quantile_0.975: 1.0022785<br />Time: 2020-05-09<br />Mean_R: 0.9042370","Quantile_0.025: 0.8315275<br />Quantile_0.975: 1.0273896<br />Time: 2020-05-10<br />Mean_R: 0.9271297","Quantile_0.025: 0.8740294<br />Quantile_0.975: 1.0765218<br />Time: 2020-05-11<br />Mean_R: 0.9734574","Quantile_0.025: 0.8315058<br />Quantile_0.975: 1.0309536<br />Time: 2020-05-12<br />Mean_R: 0.9285161","Quantile_0.025: 0.8212608<br />Quantile_0.975: 1.0187622<br />Time: 2020-05-13<br />Mean_R: 0.9170503","Quantile_0.025: 0.8451378<br />Quantile_0.975: 1.0503327<br />Time: 2020-05-14<br />Mean_R: 0.9453777","Quantile_0.025: 0.7792151<br />Quantile_0.975: 0.9779502<br />Time: 2020-05-15<br />Mean_R: 0.8757947","Quantile_0.025: 0.6902216<br />Quantile_0.975: 0.8817026<br />Time: 2020-05-16<br />Mean_R: 0.7825898","Quantile_0.025: 0.5882869<br />Quantile_0.975: 0.7754764<br />Time: 2020-05-17<br />Mean_R: 0.6787211","Quantile_0.025: 0.5475259<br />Quantile_0.975: 0.7455993<br />Time: 2020-05-18<br />Mean_R: 0.6428078","Quantile_0.025: 0.6925571<br />Quantile_0.975: 0.9333033<br />Time: 2020-05-19<br />Mean_R: 0.8081502","Quantile_0.025: 0.6745258<br />Quantile_0.975: 0.9067746<br />Time: 2020-05-20<br />Mean_R: 0.7872755","Quantile_0.025: 0.7359279<br />Quantile_0.975: 0.9813677<br />Time: 2020-05-21<br />Mean_R: 0.8549079","Quantile_0.025: 0.8266645<br />Quantile_0.975: 1.0896010<br />Time: 2020-05-22<br />Mean_R: 0.9538971","Quantile_0.025: 0.9606187<br />Quantile_0.975: 1.2355485<br />Time: 2020-05-23<br />Mean_R: 1.0939416","Quantile_0.025: 1.0562245<br />Quantile_0.975: 1.3387569<br />Time: 2020-05-24<br />Mean_R: 1.1945036","Quantile_0.025: 1.5027000<br />Quantile_0.975: 1.8341947<br />Time: 2020-05-25<br />Mean_R: 1.6654206","Quantile_0.025: 1.6162120<br />Quantile_0.975: 2.0024668<br />Time: 2020-05-26<br />Mean_R: 1.8015835","Quantile_0.025: 1.2308229<br />Quantile_0.975: 1.5615421<br />Time: 2020-05-27<br />Mean_R: 1.3882650","Quantile_0.025: 1.0536973<br />Quantile_0.975: 1.2988678<br />Time: 2020-05-28<br />Mean_R: 1.1712249","Quantile_0.025: 1.1293588<br />Quantile_0.975: 1.3533778<br />Time: 2020-05-29<br />Mean_R: 1.2378207","Quantile_0.025: 1.0353547<br />Quantile_0.975: 1.2417867<br />Time: 2020-05-30<br />Mean_R: 1.1360191","Quantile_0.025: 1.0016974<br />Quantile_0.975: 1.1939384<br />Time: 2020-05-31<br />Mean_R: 1.0959593","Quantile_0.025: 0.6915197<br />Quantile_0.975: 0.8485124<br />Time: 2020-06-01<br />Mean_R: 0.7676737","Quantile_0.025: 0.4037763<br />Quantile_0.975: 0.5332146<br />Time: 2020-06-02<br />Mean_R: 0.4664723","Quantile_0.025: 0.7081625<br />Quantile_0.975: 0.9413266<br />Time: 2020-06-03<br />Mean_R: 0.8196677","Quantile_0.025: 1.4914879<br />Quantile_0.975: 1.8004973<br />Time: 2020-06-04<br />Mean_R: 1.6414514","Quantile_0.025: 1.4914879<br />Quantile_0.975: 1.8004973<br />Time: 2020-06-04<br />Mean_R: 1.6414514","Quantile_0.025: 1.4914879<br />Quantile_0.975: 1.8004973<br />Time: 2020-06-04<br />Mean_R: 1.6414514","Quantile_0.025: 0.7081625<br />Quantile_0.975: 0.9413266<br />Time: 2020-06-03<br />Mean_R: 0.8196677","Quantile_0.025: 0.4037763<br />Quantile_0.975: 0.5332146<br />Time: 2020-06-02<br />Mean_R: 0.4664723","Quantile_0.025: 0.6915197<br />Quantile_0.975: 0.8485124<br />Time: 2020-06-01<br />Mean_R: 0.7676737","Quantile_0.025: 1.0016974<br />Quantile_0.975: 1.1939384<br />Time: 2020-05-31<br />Mean_R: 1.0959593","Quantile_0.025: 1.0353547<br />Quantile_0.975: 1.2417867<br />Time: 2020-05-30<br />Mean_R: 1.1360191","Quantile_0.025: 1.1293588<br />Quantile_0.975: 1.3533778<br />Time: 2020-05-29<br />Mean_R: 1.2378207","Quantile_0.025: 1.0536973<br />Quantile_0.975: 1.2988678<br />Time: 2020-05-28<br />Mean_R: 1.1712249","Quantile_0.025: 1.2308229<br />Quantile_0.975: 1.5615421<br />Time: 2020-05-27<br />Mean_R: 1.3882650","Quantile_0.025: 1.6162120<br />Quantile_0.975: 2.0024668<br />Time: 2020-05-26<br />Mean_R: 1.8015835","Quantile_0.025: 1.5027000<br />Quantile_0.975: 1.8341947<br />Time: 2020-05-25<br />Mean_R: 1.6654206","Quantile_0.025: 1.0562245<br />Quantile_0.975: 1.3387569<br />Time: 2020-05-24<br />Mean_R: 1.1945036","Quantile_0.025: 0.9606187<br />Quantile_0.975: 1.2355485<br />Time: 2020-05-23<br />Mean_R: 1.0939416","Quantile_0.025: 0.8266645<br />Quantile_0.975: 1.0896010<br />Time: 2020-05-22<br />Mean_R: 0.9538971","Quantile_0.025: 0.7359279<br />Quantile_0.975: 0.9813677<br />Time: 2020-05-21<br />Mean_R: 0.8549079","Quantile_0.025: 0.6745258<br />Quantile_0.975: 0.9067746<br />Time: 2020-05-20<br />Mean_R: 0.7872755","Quantile_0.025: 0.6925571<br />Quantile_0.975: 0.9333033<br />Time: 2020-05-19<br />Mean_R: 0.8081502","Quantile_0.025: 0.5475259<br />Quantile_0.975: 0.7455993<br />Time: 2020-05-18<br />Mean_R: 0.6428078","Quantile_0.025: 0.5882869<br />Quantile_0.975: 0.7754764<br />Time: 2020-05-17<br />Mean_R: 0.6787211","Quantile_0.025: 0.6902216<br />Quantile_0.975: 0.8817026<br />Time: 2020-05-16<br />Mean_R: 0.7825898","Quantile_0.025: 0.7792151<br />Quantile_0.975: 0.9779502<br />Time: 2020-05-15<br />Mean_R: 0.8757947","Quantile_0.025: 0.8451378<br />Quantile_0.975: 1.0503327<br />Time: 2020-05-14<br />Mean_R: 0.9453777","Quantile_0.025: 0.8212608<br />Quantile_0.975: 1.0187622<br />Time: 2020-05-13<br />Mean_R: 0.9170503","Quantile_0.025: 0.8315058<br />Quantile_0.975: 1.0309536<br />Time: 2020-05-12<br />Mean_R: 0.9285161","Quantile_0.025: 0.8740294<br />Quantile_0.975: 1.0765218<br />Time: 2020-05-11<br />Mean_R: 0.9734574","Quantile_0.025: 0.8315275<br />Quantile_0.975: 1.0273896<br />Time: 2020-05-10<br />Mean_R: 0.9271297","Quantile_0.025: 0.8107021<br />Quantile_0.975: 1.0022785<br />Time: 2020-05-09<br />Mean_R: 0.9042370","Quantile_0.025: 0.9215320<br />Quantile_0.975: 1.1270193<br />Time: 2020-05-08<br />Mean_R: 1.0229448","Quantile_0.025: 0.9177757<br />Quantile_0.975: 1.1230034<br />Time: 2020-05-07<br />Mean_R: 1.0177076","Quantile_0.025: 0.9178314<br />Quantile_0.975: 1.1252365<br />Time: 2020-05-06<br />Mean_R: 1.0192323","Quantile_0.025: 0.8593883<br />Quantile_0.975: 1.0604293<br />Time: 2020-05-05<br />Mean_R: 0.9573942","Quantile_0.025: 0.8711130<br />Quantile_0.975: 1.0742462<br />Time: 2020-05-04<br />Mean_R: 0.9694076","Quantile_0.025: 0.8632728<br />Quantile_0.975: 1.0714901<br />Time: 2020-05-03<br />Mean_R: 0.9649479","Quantile_0.025: 0.7678267<br />Quantile_0.975: 0.9739700<br />Time: 2020-05-02<br />Mean_R: 0.8669556","Quantile_0.025: 0.6044835<br />Quantile_0.975: 0.7785966<br />Time: 2020-05-01<br />Mean_R: 0.6891122","Quantile_0.025: 0.6296097<br />Quantile_0.975: 0.7966553<br />Time: 2020-04-30<br />Mean_R: 0.7104923","Quantile_0.025: 0.6725822<br />Quantile_0.975: 0.8413393<br />Time: 2020-04-29<br />Mean_R: 0.7542569","Quantile_0.025: 0.6940623<br />Quantile_0.975: 0.8607246<br />Time: 2020-04-28<br />Mean_R: 0.7750321","Quantile_0.025: 0.7128178<br />Quantile_0.975: 0.8815614<br />Time: 2020-04-27<br />Mean_R: 0.7946683","Quantile_0.025: 0.6613845<br />Quantile_0.975: 0.8157206<br />Time: 2020-04-26<br />Mean_R: 0.7367384","Quantile_0.025: 0.7122261<br />Quantile_0.975: 0.8750323<br />Time: 2020-04-25<br />Mean_R: 0.7922326","Quantile_0.025: 0.6813317<br />Quantile_0.975: 0.8458828<br />Time: 2020-04-24<br />Mean_R: 0.7610106","Quantile_0.025: 0.5969504<br />Quantile_0.975: 0.7452475<br />Time: 2020-04-23<br />Mean_R: 0.6685343","Quantile_0.025: 0.5963503<br />Quantile_0.975: 0.7416824<br />Time: 2020-04-22<br />Mean_R: 0.6656289","Quantile_0.025: 0.5785429<br />Quantile_0.975: 0.7047584<br />Time: 2020-04-21<br />Mean_R: 0.6398290","Quantile_0.025: 0.6592813<br />Quantile_0.975: 0.7839373<br />Time: 2020-04-20<br />Mean_R: 0.7202928","Quantile_0.025: 0.7184101<br />Quantile_0.975: 0.8424234<br />Time: 2020-04-19<br />Mean_R: 0.7792096","Quantile_0.025: 0.7433145<br />Quantile_0.975: 0.8574681<br />Time: 2020-04-18<br />Mean_R: 0.7988849","Quantile_0.025: 0.8481957<br />Quantile_0.975: 0.9682944<br />Time: 2020-04-17<br />Mean_R: 0.9070714","Quantile_0.025: 0.8799286<br />Quantile_0.975: 1.0017123<br />Time: 2020-04-16<br />Mean_R: 0.9399379","Quantile_0.025: 0.8538492<br />Quantile_0.975: 0.9713853<br />Time: 2020-04-15<br />Mean_R: 0.9120029","Quantile_0.025: 0.9150903<br />Quantile_0.975: 1.0358366<br />Time: 2020-04-14<br />Mean_R: 0.9742704","Quantile_0.025: 0.9069065<br />Quantile_0.975: 1.0280135<br />Time: 2020-04-13<br />Mean_R: 0.9661802","Quantile_0.025: 0.8906155<br />Quantile_0.975: 1.0088494<br />Time: 2020-04-12<br />Mean_R: 0.9490871","Quantile_0.025: 0.9026455<br />Quantile_0.975: 1.0239562<br />Time: 2020-04-11<br />Mean_R: 0.9619265","Quantile_0.025: 0.8356605<br />Quantile_0.975: 0.9461540<br />Time: 2020-04-10<br />Mean_R: 0.8902274","Quantile_0.025: 0.8996834<br />Quantile_0.975: 1.0108810<br />Time: 2020-04-09<br />Mean_R: 0.9548781","Quantile_0.025: 0.9946620<br />Quantile_0.975: 1.1146923<br />Time: 2020-04-08<br />Mean_R: 1.0538434","Quantile_0.025: 0.9960355<br />Quantile_0.975: 1.1159608<br />Time: 2020-04-07<br />Mean_R: 1.0550439","Quantile_0.025: 0.9737507<br />Quantile_0.975: 1.0923118<br />Time: 2020-04-06<br />Mean_R: 1.0324830","Quantile_0.025: 1.0126582<br />Quantile_0.975: 1.1343301<br />Time: 2020-04-05<br />Mean_R: 1.0726986","Quantile_0.025: 1.0017722<br />Quantile_0.975: 1.1248623<br />Time: 2020-04-04<br />Mean_R: 1.0621061","Quantile_0.025: 1.0384199<br />Quantile_0.975: 1.1669429<br />Time: 2020-04-03<br />Mean_R: 1.1016679","Quantile_0.025: 0.9554561<br />Quantile_0.975: 1.0760407<br />Time: 2020-04-02<br />Mean_R: 1.0146179","Quantile_0.025: 0.9823070<br />Quantile_0.975: 1.1061078<br />Time: 2020-04-01<br />Mean_R: 1.0430305","Quantile_0.025: 1.0254459<br />Quantile_0.975: 1.1554226<br />Time: 2020-03-31<br />Mean_R: 1.0895249","Quantile_0.025: 0.9943596<br />Quantile_0.975: 1.1260916<br />Time: 2020-03-30<br />Mean_R: 1.0595067","Quantile_0.025: 1.0790429<br />Quantile_0.975: 1.2217734<br />Time: 2020-03-29<br />Mean_R: 1.1489571","Quantile_0.025: 1.0835667<br />Quantile_0.975: 1.2332873<br />Time: 2020-03-28<br />Mean_R: 1.1568634","Quantile_0.025: 1.1262779<br />Quantile_0.975: 1.2929565<br />Time: 2020-03-27<br />Mean_R: 1.2068622","Quantile_0.025: 1.2278819<br />Quantile_0.975: 1.3999454<br />Time: 2020-03-26<br />Mean_R: 1.3119942","Quantile_0.025: 1.1460301<br />Quantile_0.975: 1.3163666<br />Time: 2020-03-25<br />Mean_R: 1.2287726","Quantile_0.025: 1.1209492<br />Quantile_0.975: 1.3074649<br />Time: 2020-03-24<br />Mean_R: 1.2114457","Quantile_0.025: 1.2247604<br />Quantile_0.975: 1.4276850<br />Time: 2020-03-23<br />Mean_R: 1.3221603","Quantile_0.025: 1.1456382<br />Quantile_0.975: 1.3881187<br />Time: 2020-03-22<br />Mean_R: 1.2612401","Quantile_0.025: 1.4198699<br />Quantile_0.975: 1.7271331<br />Time: 2020-03-21<br />Mean_R: 1.5662393","Quantile_0.025: 1.4460077<br />Quantile_0.975: 1.7941690<br />Time: 2020-03-20<br />Mean_R: 1.6094005","Quantile_0.025: 1.5280661<br />Quantile_0.975: 1.9413240<br />Time: 2020-03-19<br />Mean_R: 1.7211253","Quantile_0.025: 1.6186190<br />Quantile_0.975: 2.1143619<br />Time: 2020-03-18<br />Mean_R: 1.8462986","Quantile_0.025: 1.7822760<br />Quantile_0.975: 2.4072961<br />Time: 2020-03-17<br />Mean_R: 2.0664943","Quantile_0.025: 2.0227794<br />Quantile_0.975: 2.8347589<br />Time: 2020-03-16<br />Mean_R: 2.3972502","Quantile_0.025: 2.7171590<br />Quantile_0.975: 3.5018201<br />Time: 2020-03-15<br />Mean_R: 3.0920947","Quantile_0.025: 1.3556748<br />Quantile_0.975: 1.9042360<br />Time: 2020-03-14<br />Mean_R: 1.6188929","Quantile_0.025: 1.1502503<br />Quantile_0.975: 1.6851524<br />Time: 2020-03-13<br />Mean_R: 1.4038988","Quantile_0.025: 1.1145277<br />Quantile_0.975: 1.6726136<br />Time: 2020-03-12<br />Mean_R: 1.3785093","Quantile_0.025: 1.1825151<br />Quantile_0.975: 1.8105578<br />Time: 2020-03-11<br />Mean_R: 1.4766864","Quantile_0.025: 1.2597807<br />Quantile_0.975: 1.9806660<br />Time: 2020-03-10<br />Mean_R: 1.5968858","Quantile_0.025: 1.2597807<br />Quantile_0.975: 1.9806660<br />Time: 2020-03-10<br />Mean_R: 1.5968858"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"transparent","dash":"solid"},"fill":"toself","fillcolor":"rgba(70,130,180,0.3)","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":59.1103362391034,"r":19.2,"b":35.9372353673724,"l":29.5611457036115},"plot_bgcolor":"rgba(240,240,240,1)","paper_bgcolor":"rgba(240,240,240,1)","font":{"color":"rgba(60,60,60,1)","family":"sans","size":15.9402241594022},"title":{"text":"Daily R<sub>e<\/sub><br><sup>Serial interval adjusted for uncertainty<\/sup>","font":{"color":"rgba(60,60,60,1)","family":"sans","size":23.9103362391034},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[18326.7,18421.3],"tickmode":"array","ticktext":["Apr","May","Jun"],"tickvals":[18353,18383,18414],"categoryorder":"array","categoryarray":["Apr","May","Jun"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.98505603985056,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(60,60,60,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(210,210,210,1)","gridwidth":0.724555643609193,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.24887406942605,3.65672230677087],"tickmode":"array","ticktext":["1","2","3"],"tickvals":[1,2,3],"categoryorder":"array","categoryarray":["1","2","3"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.98505603985056,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(60,60,60,1)","family":"sans","size":12.7521793275218},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(210,210,210,1)","gridwidth":0.724555643609193,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"transparent","width":0.724555643609193,"linetype":"none"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(240,240,240,1)","bordercolor":"transparent","borderwidth":2.06156048675734,"font":{"color":"rgba(60,60,60,1)","family":"sans","size":12.7521793275218}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"1615c452a578c":{"x":{},"y":{},"type":"scatter"},"1615c5ed9cbcd":{"ymin":{},"ymax":{},"x":{},"y":{}}},"cur_data":"1615c452a578c","visdat":{"1615c452a578c":["function (y) ","x"],"1615c5ed9cbcd":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 1: Click on the chart to engage its interactive mode. <em>Ribbon:</em> 95% CI of the mean <span class="math inline">\(R_e\)</span>.
+</p>
+</div>
+</div>
+<p>The COVID-19 pandemic in Malaysia will only die out if the effective reproduction number, <span class="math inline">\(R_e\)</span>, remains below zero.</p>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom">
+<h3 id="updates-and-corrections">Corrections</h3>
+<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/aaimsco/rpubs/issues/new">create an issue</a> on the source repository.</p>
+<h3 id="reuse">Reuse</h3>
+<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/aaimsco/rpubs">https://github.com/aaimsco/rpubs</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
+</div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

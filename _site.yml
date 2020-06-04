@@ -19,10 +19,12 @@ navbar:
           href: trialdistill2.html
         - text: "New Cases"
           href: msia_covid_b.html
+        - text: "ILI/SARI"
+          href: ilisari.htmL
         - text: "Curvebending"
           href: curvebenders.html
-        - text: "ILI/SARI"
-          href: ilisari.html
+        - text: "Daily Reff"
+          href: reff.html
     - text: "About"
       href: about.html
     - icon: fab fa-github
