@@ -19,6 +19,7 @@ output:
 ### ***The chart below illustrates that a 10-day period is the best time frame to use to decide on the effectiveness of the MCO strategy in Malaysia.***
 
 ```{r message=FALSE, echo=FALSE}
+library(distill)
 library(plotly)
 library(shiny)
 library(googlesheets)
