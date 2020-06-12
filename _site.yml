@@ -20,7 +20,7 @@ navbar:
         - text: "New Cases"
           href: msia_covid_b.html
         - text: "ILI/SARI"
-          href: ilisari.htmL
+          href: ilisari.html
         - text: "Curvebending"
           href: curvebenders.html
         - text: "Daily Reff"
