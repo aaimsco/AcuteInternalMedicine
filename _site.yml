@@ -25,6 +25,8 @@ navbar:
           href: curvebenders.html
         - text: "Daily Reff"
           href: reff.html
+        - text: "Consensus: Limiting Rx"
+          href: cplimit.html  
     - text: "About"
       href: about.html
     - icon: fab fa-github
