@@ -3,9 +3,9 @@ title: "Clinical Pathway for Assessment of Resuscitation Status and Limitation o
 description: 
   A consensus statement commissioned by Advanced Acute Internal Medicine Society Malaysia.
 author:
-  - name: Dr Saiful Safuan Md Sani 
+  - name: Abdul Rahim, A., Zulkifli, S. Z., Md-Sani, S. S., Chong, G. M. E., Khalid, K. E., & Hiew, W. H. A. 
     url: https://saifulsafuan.com
-    affiliation: Advanced Acute Internal Medicine Society Malaysia & Department of Medicine Hospital Kuala Lumpur
+    affiliation: Advanced Acute Internal Medicine Society Malaysia 
     affiliation_url: https://aaims.co
 date: "`r Sys.Date()`"
 output: 
