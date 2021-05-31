@@ -23,73 +23,73 @@ library(knitr)
 ```{r}
 staplr::split_pdf("cplimit.pdf", output_directory = ".", prefix = "cplimit_")
 ```
-```{r label, out.width = "85%", fig.cap = c("Pathway page 1", "Pathway page 2", "Introduction", "Assessment for resuscitation status", "SOFA Score Table", "Clinical Frailty Scale Table", "Direction of Care", "Withdrawal of therapy", "Symptom Management at the End of Life", "References", "Consensus Development Group"), echo = FALSE}
+```{r label, out.width = "100%", fig.cap = c("Pathway page 1", "Pathway page 2", "Introduction", "Assessment for resuscitation status", "SOFA Score Table", "Clinical Frailty Scale Table", "Direction of Care", "Withdrawal of therapy", "Symptom Management at the End of Life", "References", "Consensus Development Group"), echo = FALSE}
 flist <- list.files()
 cplimit_files <- flist[grep("cplimit_", flist)]
 
 ```
 ## Introduction
-```{r, out.width = "85%", fig.cap = "Introduction", echo = FALSE}
+```{r, out.width = "100%", fig.cap = "Introduction", echo = FALSE}
 knitr::include_graphics("cplimit_0003.pdf")
 ```
 <a href="#top">Return to table of contents</a>
 
 ## Assessment for resuscitation status
-```{r, out.width = "85%", fig.cap = "Assessment for resuscitation status", echo = FALSE}
+```{r, out.width = "100%", fig.cap = "Assessment for resuscitation status", echo = FALSE}
 knitr::include_graphics("cplimit_0004.pdf")
 ```
 <a href="#top">Return to table of contents</a>
 
 ## SOFA Score Table
-```{r, out.width = "85%", fig.cap = "SOFA Score Table", echo = FALSE}
+```{r, out.width = "100%", fig.cap = "SOFA Score Table", echo = FALSE}
 knitr::include_graphics("cplimit_0005.pdf")
 ```
 <a href="#top">Return to table of contents</a>
 
 ## Clinical Frailty Scale Table
-```{r, out.width = "85%", fig.cap = "Clinical Frailty Scale Tabl", echo = FALSE}
+```{r, out.width = "100%", fig.cap = "Clinical Frailty Scale Tabl", echo = FALSE}
 knitr::include_graphics("cplimit_0006.pdf")
 ```
 <a href="#top">Return to table of contents</a>
 
 ## Direction of Care
-```{r, out.width = "85%", fig.cap = "Direction of Care", echo = FALSE}
+```{r, out.width = "100%", fig.cap = "Direction of Care", echo = FALSE}
 knitr::include_graphics("cplimit_0007.pdf")
 ```
 <a href="#top">Return to table of contents</a>
 
 ## Withdrawal of therapy
-```{r, out.width = "85%", fig.cap = "Withdrawal of therapy", echo = FALSE}
+```{r, out.width = "100%", fig.cap = "Withdrawal of therapy", echo = FALSE}
 knitr::include_graphics("cplimit_0008.pdf")
 ```
 <a href="#top">Return to table of contents</a>
 
 ## Symptom Management at the End of Life
-```{r, out.width = "85%", fig.cap = "Symptom Management at the End of Life", echo = FALSE}
+```{r, out.width = "100%", fig.cap = "Symptom Management at the End of Life", echo = FALSE}
 knitr::include_graphics("cplimit_0009.pdf")
 ```
 <a href="#top">Return to table of contents</a>
 
 ## References
-```{r, out.width = "85%", fig.cap = "References", echo = FALSE}
+```{r, out.width = "100%", fig.cap = "References", echo = FALSE}
 knitr::include_graphics("cplimit_0010.pdf")
 ```
 <a href="#top">Return to table of contents</a>
 
 ## Pathway page 1
-```{r, out.width = "85%", fig.cap = "Pathway page 1", echo = FALSE}
+```{r, out.width = "100%", fig.cap = "Pathway page 1", echo = FALSE}
 knitr::include_graphics("cplimit_0001.pdf")
 ```
 <a href="#top">Return to table of contents</a>
 
 ## Pathway page 2
-```{r, out.width = "85%", fig.cap = "Pathway page 2", echo = FALSE}
+```{r, out.width = "100%", fig.cap = "Pathway page 2", echo = FALSE}
 knitr::include_graphics("cplimit_0002.pdf")
 ```
 <a href="#top">Return to table of contents</a>
 
 ## Consensus Development Group
-```{r, out.width = "85%", fig.cap = "Consensus Development Group", echo = FALSE}
+```{r, out.width = "100%", fig.cap = "Consensus Development Group", echo = FALSE}
 knitr::include_graphics("cplimit_0011.pdf")
 ```
 <a href="#top">Return to table of contents</a>
