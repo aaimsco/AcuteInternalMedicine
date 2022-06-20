@@ -1,7 +1,7 @@
 name: "rpubs"
 title: "COVID-19 in Malaysia"
-description: |
-  COVID-19 in Malaysia
+description:
+  "Advanced Acute Internal Medicine Society Malaysia's Website on COVID-19"
 output_dir: "docs"
 google_analytics: "UA-98890761-11"
 base_url: https://aaims.co

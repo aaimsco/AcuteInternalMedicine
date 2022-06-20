@@ -1,7 +1,7 @@
 ---
-title: "About this site"
+title: "Advanced Acute Internal Medicine Society of Malaysia"
 description: |
-  An Advanced Acute internal Medicine Society of Malaysia's website
+  An Advanced Acute Internal Medicine Society of Malaysia's website on COVID-19
 ---
 
 ```{r setup, include=FALSE}
