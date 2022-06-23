@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
+    <loc>https://aaimsco.github.io/AcuteInternalMedicine/</loc>
+    <lastmod>2022-06-23T12:18:56+08:00</lastmod>
+  </url>
+  <url>
     <loc>https://aaimsco.github.io/AcuteInternalMedicine/about.html</loc>
     <lastmod>2022-06-23T11:42:02+08:00</lastmod>
   </url>
@@ -15,10 +19,6 @@
   <url>
     <loc>https://aaimsco.github.io/AcuteInternalMedicine/ilisari.html</loc>
     <lastmod>2022-06-23T11:30:44+08:00</lastmod>
-  </url>
-  <url>
-    <loc>https://aaimsco.github.io/AcuteInternalMedicine/</loc>
-    <lastmod>2022-06-23T12:18:56+08:00</lastmod>
   </url>
   <url>
     <loc>https://aaimsco.github.io/AcuteInternalMedicine/msia_covid_b.html</loc>
