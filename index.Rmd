@@ -16,3 +16,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+Acute Internal Medicine is the field of practice within Internal Medicine that provides assessment and treatment for adult patients with medical conditions when they are first admitted to hospital. 
+
+Its adoption has been justified in view of two needs: the need of patients to receive expert acute care and the need of hospitals to deliver a service on limited resources with greater efficiency and co-ordination.
