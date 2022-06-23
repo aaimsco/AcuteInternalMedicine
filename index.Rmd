@@ -1,5 +1,5 @@
 ---
-title: "COVID-19 in Malaysia"
+title: "Advanced Acute Internal Medicine Society of Malaysia"
 description: |
   Advanced Acute Internal Medicine Society of Malaysia's data science on COVID-19 pandemic in Malaysia and relevant resources
 site: distill::distill_website
