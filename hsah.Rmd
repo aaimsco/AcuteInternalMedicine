@@ -155,7 +155,7 @@ subplot(
       font=list(size=12, color="grey"))
  )
 ```
-We had a reasonable outcome with Door-to-CT of 27 minutes (target 25 minutes) 
+We had a reasonable outcome with median Door-to-CT of 17 minutes (target 25 minutes) 
 
 ```{r message=FALSE, echo=FALSE}
 url <- 'https://docs.google.com/spreadsheets/d/1uq4sl13vQh7fI0nxRWuCOZezo8xTV0_nt7Ullh1dyrA/edit#gid=1195739865'
@@ -181,7 +181,7 @@ subplot(
  )
 ```
 
-and Door-to-Needle of 94 minutes.
+and median Door-to-Needle of 80 minutes.
 
 ```{r message=FALSE, echo=FALSE}
 url <- 'https://docs.google.com/spreadsheets/d/1uq4sl13vQh7fI0nxRWuCOZezo8xTV0_nt7Ullh1dyrA/edit#gid=1635939701'
