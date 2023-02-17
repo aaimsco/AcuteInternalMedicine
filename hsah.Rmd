@@ -5,6 +5,8 @@ description:
 author:
   - name: Dr Zainura Che Isa 
     affiliation: Department of Medicine Hospital Sultan Abdul Halim
+  - name: Dr Saiful Safuan Md Sani
+    affiliation: Department of Medicine Hospital Kuala Lumpur
 date: "`2023-02-17`"
 output: 
   distill::distill_article:
@@ -104,6 +106,8 @@ subplot(
       font=list(size=12, color="grey"))
  )
 ```
+
+<br></br>
 AIM Unit in HSAH has an interest in looking after this set of patients to improve the mortality and morbidity outcomes. The collaboration with Malaysian Stroke Council enables the initiation of Hyperacute Stroke Management and Acute Stroke Thrombolysis in HSAH. The collaboration includes training clinicians, exchanging resources (Alteplase on an exchange basis) and developing the network of tertiary stroke care. The HSAH hyperacute stroke thrombolysis care was developed following the Malaysian Stroke Council and international standards. 
 
 Throughout the service since September 2019, during office hours, hyperacute stroke protocol was activated for 118 cases, and 23 cases had thrombolysis. 
@@ -130,6 +134,8 @@ subplot(
       font=list(size=12, color="grey"))
  )
 ```
+
+<br></br>
 A few parameters were analysed, including the onset of symptoms, Door-to-CT scan time and Door-to-Needle time. 
 
 ```{r message=FALSE, echo=FALSE}
@@ -155,6 +161,8 @@ subplot(
       font=list(size=12, color="grey"))
  )
 ```
+
+<br></br>
 We had a reasonable outcome with median Door-to-CT of 17 minutes (target 25 minutes) 
 
 ```{r message=FALSE, echo=FALSE}
@@ -181,6 +189,7 @@ subplot(
  )
 ```
 
+<br></br>
 and median Door-to-Needle of 80 minutes.
 
 ```{r message=FALSE, echo=FALSE}
