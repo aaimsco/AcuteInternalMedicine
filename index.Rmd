@@ -1,7 +1,7 @@
 ---
 title: "Advanced Acute Internal Medicine Society of Malaysia"
 description: |
-  Advanced Acute Internal Medicine Society of Malaysia's data science on COVID-19 pandemic in Malaysia and relevant resources
+  Acute internal medicine in Malaysia.
 site: distill::distill_website
 ---
 
@@ -16,12 +16,34 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-Acute Internal Medicine is the field of practice within Internal Medicine that provides assessment and treatment for adult patients with medical conditions when they are first admitted to hospital. 
+## What is Acute Internal Medicine?
 
-Its adoption has been justified in view of two needs: the need of patients to receive expert acute care and the need of hospitals to deliver a service on limited resources with greater efficiency and co-ordination.
+Acute Internal Medicine is the field of practice within Internal Medicine that provides assessment and treatment for adult patients with medical conditions when they are first admitted to hospital. This usually involves the first 24-72 hours of admission to hospital. The field also provides management of patients who deteriorate acutely during hospital stay.
 
-The tensions between increased specialisation and the need to retain high quality general medical skills to manage the emergency workload are well recognised [1](https://doi.org/10.7861/clinmedicine.4-3-203). 
+## The History | Origin | Other Countries
 
-The creation of specialties within medicine have raised concerns about the ability of specialists in one specialty to deliver the best care to patients suffering from the acute disorders of another specialty. Different hospitals will have consultant staff in both emergency and general medicine who have differing ambitions and enthusiasms for the early management of ill patients [2](https://emj.bmj.com/content/21/6/652).
+In the United Kingdom, it is defined as,‘that part of general internal medicine (GIM) concerned with the immediate and early specialist management of adult patients suffering from a wide range of medical conditions who present to, or from within, hospitals, requiring urgent or emergency care’. 
 
-In the UK, the idea of Acute Internal Medicine specialty was conceived in 1999. The recognition of acute medicine for subspecialty training by the Joint Committee for Higher Medical Training was established in July 2003.
+Its adoption has been justified in view of two needs: the need of patients to receive expert acute care and the need of hospitals to deliver a service on limited resources with greater efficiency and coordination.
+
+The tensions between increased specialisation and the need to retain high quality general medical skills to manage the emergency workload are well [recognised](https://doi.org/10.7861/clinmedicine.4-3-203).
+The creation of specialties within medicine have raised [concerns](https://emj.bmj.com/content/21/6/652) about the ability of specialists in one specialty to deliver the best care to patients suffering from the acute disorders of another specialty. Different hospitals will have consultant staff in both emergency and general medicine who have differing ambitions and varying enthusiasm for the early management of ill patients.
+
+In the early 1990s it was recognised that the established model of medical patients being admitted from the emergency department (ED) directly to a ward bed was unsustainable in the face of reduced bed capacity and increasing patient attendances/admissions. Alternative models of care were required. Acute medicine evolved to provide patients with acute medical illness with the best quality care, in the right environment, with assessment, diagnosis and treatment as actively managed components of that care. In 1996, the Royal College of Physicians of London (RCPL) reviewed different models of care and concluded that emergency care provided by specialist teams would only be possible in very large hospitals covering large populations. The report recommended that in the majority of hospitals, care would continue to be provided by consultant physicians with specialty training, who participated in the on-call rota for acute medicine and practised their specialty in parallel. Interestingly, an alternative possibility was outlined: ‘a new type of physician with specific responsibility for the care of medical emergencies’.
+
+In 1998 the Scottish Intercollegiate Working Party outlined recommendations for ‘Acute medical admissions and the future of general medicine’. It suggested that large hospitals might consider appointing ‘physicians in acute care medicine’ and that the Colleges should consider setting up a working party to address career structures and training issues.
+
+Later, in 1999 the idea of Acute Internal Medicine specialty was conceived. Acute medicine thus emerged in the 1990s as a result of the NHS UK recognising the need to improve acute medical care. The recognition of acute medicine for subspecialty training by the Joint Committee for Higher Medical Training was established in July [2003](https://doi.org/10.7861/clinmedicine.4-3-203).
+
+
+The [acute physician](https://doi.org/10.1136/bmj.j3832) is someone who is comfortable dealing with complex, acutely deteriorating or critical patients and expediting rapid discharge across interfaces.
+
+A report of an RCP working party in 2004 recommended that the goal should be to provide at least three consultants in acute medicine in every acute trust by 2008, and more in larger hospitals. Larger trusts may eventually have 7–12 consultants in acute medicine. 
+
+In August 2009, acute internal medicine (AIM) was formally recognised as a specialty for medical training. 
+
+Other countries are increasingly adopting this model of care, including [Ireland](https://pubmed.ncbi.nlm.nih.gov/21465875/), [Australasia](https://doi.org/10.1111/j.1445-5994.2010.02359.x) and other parts of [Europe](https://pubmed.ncbi.nlm.nih.gov/21827721/).
+
+In 2015 there were 90 consultant appointments unfilled – 48% of those posts advertised. The Society for Acute Medicine UK monitors BMJ advertisements for consultants in AIM. Their data shows that from February to September 2016 there were 162 permanent AIM appointments. In 2015 there were 336 trainees in AIM in the UK.
+There are now over [450 consultants](https://www.takeaim.org.uk/about/what-is-acute-internal-medicine) specialising in Acute Medicine across the UK and over 225 hospitals have an Acute Medical Unit (AMU).
+

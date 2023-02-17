@@ -1,0 +1,15 @@
+---
+title: "Impact of Acute Medical Units"
+description: |
+  Acute internal medicine: Evidence in the literature.
+site: distill::distill_website
+---
+
+Too few beds, poor access to investigations, and lack of community support to unblock beds were reasons identified in the UK as top [problems](http://dx.doi.org/10.1136/emj.17.6.391) in the hospital admission process. 
+
+The Royal College of Physicians (RCP) defined [acute medical units](http://dx.doi.org/10.1136/emj.2008.059295) (AMUs) as ‘a dedicated facility within a hospital that acts as the focus for acute medical care for patients who have presented as medical emergencies to hospital’. In the UK, AMUs are the base for the practise of acute internal medicine (AIM), and have become [integral](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4953605/) to the care pathway of most patients who require hospital-based acute medical care in the UK. 
+
+A recent [systematic review](https://doi.org/10.1093/intqhc/mzw056) of 17 studies of 12 acute medical units (AMUs) across 5 countries established the clear effectiveness of acute medical units in reducing the length of stay (LOS), and less convincingly, mortality rates. Hospital LOS was the outcome of interest in 18 analyses across 12 studies totalling 315 000 patients/episodes. All reported a reduction in LOS in the AMU group when compared to the non-AMU group. For those which reported mean LOS for the two groups, the magnitude of reduction ranged from 0.3 to 2.62 days. Mortality was the outcome of interest in 14 analyses across eight studies totalling 890,000 patients/episodes measured at varying time points (in-hospital, 30 days post-admission, 30 days post-discharge, 1 year). A reduced mortality rate was found in the AMU group in comparison to the non-AMU group in 12 of the 14 analyses. Five of these 12 analyses reported this decrease as being statistically significant. 
+
+[One study](https://doi.org/10.1093/qjmed/hcn025) that used logistic regression to adjust for confounders, which include comorbidities, illness severity score and disease category, reported a significant reduction in in-hospital mortality in the AMU group compared to the non-AMU group (adjusted odds ratio = 0.28, 95% CI 0.23– 0.35). 
+

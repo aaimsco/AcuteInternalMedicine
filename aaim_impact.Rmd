@@ -1,0 +1,27 @@
+---
+title: "Features and Objectives of Acute Internal Medicine"
+description: |
+  Acute internal medicine in Malaysia.
+site: distill::distill_website
+---
+
+Like established subspecialties palliative care, geriatrics, oncology, and intensive care, to name but a few, Acute Internal Medicine has a functional basis rather than organ based.
+
+
+
+The key features and objectives of AIM are:
+
+
+* clinical service delivered by acute physicians within the AMU environments for at least 12 hours per day and seven days per week
+* medical leadership within an AMU in a service designed and managed by acute physicians who specialise in AIM
+* service delivered by an AIM physician and dedicated multidisciplinary team with timely and appropriate interaction with other specialties
+* service design informed by quality standards
+* performance benchmarked against key clinical quality indicators for AMU.
+
+
+Acute internal medicine is a model of care in which patients with acute medical illness are provided with the best quality care, in the right environment, with assessment, diagnosis and treatment as actively managed components of that care.
+
+
+
+
+

@@ -1,0 +1,208 @@
+---
+title: "Acute Internal Medicine Service at Hospital Sultan Abdul Halim, Sungai Petani, Kedah"
+description: 
+  Impact of Acute Internal Medicine at Hospital Sultan Abdul Halim
+author:
+  - name: Dr Zainura Che Isa 
+    affiliation: Department of Medicine Hospital Sultan Abdul Halim
+date: "`2023-02-17`"
+output: 
+  distill::distill_article:
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+---
+
+## Background 
+
+Hospital Sungai Petani started its operation in 1920 as Rumah Sakit Sungai Petani, located in a rubber estate, before changing its name to Hospital Daerah Sungai Petani with 396 bedded capacity. In January 2007, the hospital changed its location to Bandar Amanjaya, Sungai Petani and was renamed Hospital Sultan Abdul Halim with 498 beds, which increased to 696 beds with time.
+
+<img src="https://drive.google.com/uc?export=view&id=1nRBhVdTzvXFgFkVEHPr3gyAT2c-srHUg" 
+     alt="Hospital Sultan Abdul Halim"
+     width="100%"
+     style="float: left; margin-right: 10px;"/>
+<figcaption>Source: drsaifulsafuan</figcaption>
+
+
+
+Hospital Sultan Abdul Halim thirteen Specialist Services with General Medical Specialist service started in 1974. The Medical Department currently has 216 beds. Admissions averaged 10,000 per year. The hospital caters for a population of 500,000 in Kuala Muda District, 70,000 in Yan District and 70,000 in Sik District (2010 census).
+
+<img src="https://drive.google.com/uc?export=view&id=1n6iGO4bWKvfUOXLI1N3xu2J3gc1RZo9K" 
+     alt="Districts of Kedah"
+     width="100%"
+     style="float: left; margin-right: 10px;"/>
+<figcaption>Districts of Kedah. Source: drsaifulsafuan</figcaption>
+
+
+
+## Services
+
+AIM HSAH started its service in 2018 and focuses on two main areas: Point of Care Ultrasound (POCUS) in managing acutely ill medical patients and managing acute stroke.
+
+
+### Point of Care Ultrasound (POCUS)
+
+Point-of-care ultrasound is performed by clinicians trained in ultrasound with focused clinical questions. As the name implied, POCUS is used at the bedside with the following functional clinical intents:
+
+#### Diagnostic:
+
+POCUS is emergent diagnostic imaging to diagnose disease either based on symptoms or signs by utilising specific clinical pathway (e.g. shortness of breath, chest pain, lower limb swelling)
+
+Usually, patients present to the clinician with an undifferentiated clinical presentation, for example, breathlessness; by utilising  POCUS, clinicians can differentiate and increase the certainty of diagnosis that's not able to be differentiated by the history and physical examination alone. The management of that particular patient may be planned accurately. 
+
+#### Therapeutic and Monitoring:
+
+Using POCUS to locate the area for therapeutic management, e.g. peritoneal tapping and pleural tapping avoids many undue complications resulting from a blind procedure. 
+
+Using POCUS to monitor patient condition or the effects of specific management promptly saves lives and resources; e.g. using POCUS after fluid resuscitation in dengue shock syndrome or monitoring fluid responsiveness in a patient with septicaemia shock. 
+
+#### Procedure  Guidance: 
+	
+POCUS is used as an aid to guide a procedure such as central line insertion or arterial line insertion. Hence the chances of getting it right on the first attempt are higher.
+
+#### Resuscitative:
+
+POCUS may be used in acute resuscitation, especially when findings the reversibility of cardiac arrest, e.g. in diagnosing massive pericardial effusion and tension pneumothorax. Visualising cardiac contractility during resuscitation also enables more effective resuscitation. 
+
+Hence, an AIM physician with these niche skills can optimise the care of a patient and the usage of resources. 
+
+
+### Management of Acute Stroke 
+
+Stroke and the morbidity related to stroke are well established. It is also one of the most significant contributors to mortality in Malaysia. Management of stroke includes management of hyperacute stroke and acute stroke. 
+
+Graph below shows total admission of patient admitted for stroke.
+
+```{r message=FALSE, echo=FALSE}
+library(distill)
+library(plotly)
+library(shiny)
+library(googlesheets)
+library(gsheet)
+library(RColorBrewer)
+```
+```{r message=FALSE, echo=FALSE}
+url <- 'https://docs.google.com/spreadsheets/d/1uq4sl13vQh7fI0nxRWuCOZezo8xTV0_nt7Ullh1dyrA/edit?usp=share_link'
+hsah_stroke <- gsheet2tbl(url)
+```
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+p <- plot_ly(hsah_stroke, x = ~factor(Year), y = ~TOTAL, alpha = 0.97, size = 7)
+subplot(
+  add_bars(p, color = ~factor(TOTAL), colors = colorRampPalette(brewer.pal(8,"Spectral"))(8),  showlegend = FALSE) 
+) %>% layout(
+     title = "Total Number of Stroke Admissions to HSAH 2015-2021 <br><sup></sup>",
+     yaxis = list(title = "Number of patients",
+     #categoryorder = "array",
+     #categoryarray = ~hsah_stroke$TOTAL, 
+     tickfont = list(size = 10)),
+     xaxis = list(title = "Year")
+) %>% layout(legend = list(x = 0.87, y = 0.9)) %>% 
+ layout(annotations = 
+ list(x = 1, y = 0.51, text = "", 
+      showarrow = F, xref='paper', yref='paper', 
+      xanchor='right', yanchor='auto', xshift=0, yshift=0,
+      font=list(size=12, color="grey"))
+ )
+```
+AIM Unit in HSAH has an interest in looking after this set of patients to improve the mortality and morbidity outcomes. The collaboration with Malaysian Stroke Council enables the initiation of Hyperacute Stroke Management and Acute Stroke Thrombolysis in HSAH. The collaboration includes training clinicians, exchanging resources (Alteplase on an exchange basis) and developing the network of tertiary stroke care. The HSAH hyperacute stroke thrombolysis care was developed following the Malaysian Stroke Council and international standards. 
+
+Throughout the service since September 2019, during office hours, hyperacute stroke protocol was activated for 118 cases, and 23 cases had thrombolysis. 
+
+```{r message=FALSE, echo=FALSE}
+url <- 'https://docs.google.com/spreadsheets/d/1uq4sl13vQh7fI0nxRWuCOZezo8xTV0_nt7Ullh1dyrA/edit#gid=609873101'
+activation <- gsheet2tbl(url)
+```
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+p <- plot_ly(activation, x = ~factor(Year), y = ~counts, alpha = 0.97, size = 7)
+subplot(
+  add_bars(p, color = ~factor(Year), colors = colorRampPalette(brewer.pal(4,"Spectral"))(4),  showlegend = TRUE, name = paste(activation$dur))
+) %>% layout(
+     title = "Total Number of Stroke Protocol Activation 2019-2022 <br><sup></sup>",
+     yaxis = list(title = "Number of patients",
+     tickfont = list(size = 10)),
+     xaxis = list(title = "Year")
+     ) %>% layout(legend = list(x = 0.87, y = 0.9, traceorder = "normal"
+      )) %>% 
+ layout(annotations = 
+ list(x = 1, y = 0.51, text = "", 
+      showarrow = F, xref='paper', yref='paper', 
+      xanchor='right', yanchor='auto', xshift=0, yshift=0,
+      font=list(size=12, color="grey"))
+ )
+```
+A few parameters were analysed, including the onset of symptoms, Door-to-CT scan time and Door-to-Needle time. 
+
+```{r message=FALSE, echo=FALSE}
+url <- 'https://docs.google.com/spreadsheets/d/1uq4sl13vQh7fI0nxRWuCOZezo8xTV0_nt7Ullh1dyrA/edit#gid=1505570927'
+odt <- gsheet2tbl(url)
+#median(odt$onset_to_door)
+```
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+p <- plot_ly(odt, x = ~factor(case), y = ~onset_to_door, alpha = 0.97, size = 7)
+subplot(
+  add_bars(p, color = ~factor(case), colors = colorRampPalette(brewer.pal(21,"Spectral"))(21),  showlegend = F)
+) %>% layout(
+     title = "Onset-to-Door Time (min)<br><sup>Median = 78 min</sup>",
+     yaxis = list(title = "Time (min)",
+     tickfont = list(size = 10)),
+     xaxis = list(title = "Case")
+     ) %>% layout(legend = list(x = 0.87, y = 0.9, traceorder = "normal"
+      )) %>% 
+ layout(annotations = 
+ list(x = 1, y = 0.51, text = "", 
+      showarrow = F, xref='paper', yref='paper', 
+      xanchor='right', yanchor='auto', xshift=0, yshift=0,
+      font=list(size=12, color="grey"))
+ )
+```
+We had a reasonable outcome with Door-to-CT of 27 minutes (target 25 minutes) 
+
+```{r message=FALSE, echo=FALSE}
+url <- 'https://docs.google.com/spreadsheets/d/1uq4sl13vQh7fI0nxRWuCOZezo8xTV0_nt7Ullh1dyrA/edit#gid=1195739865'
+d2ct <- gsheet2tbl(url)
+#median(d2ct$door_to_CT, na.rm = T)
+```
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+p <- plot_ly(d2ct, x = ~factor(case), y = ~door_to_CT, alpha = 0.97, size = 7)
+subplot(
+  add_bars(p, color = ~factor(case), colors = colorRampPalette(brewer.pal(21,"Spectral"))(21),  showlegend = F)
+) %>% layout(
+     title = "Door-to-CT Time (min)<br><sup>Median = 17 min</sup>",
+     yaxis = list(title = "Time (min)",
+     tickfont = list(size = 10)),
+     xaxis = list(title = "Case")
+     ) %>% layout(legend = list(x = 0.87, y = 0.9, traceorder = "normal"
+      )) %>% 
+ layout(annotations = 
+ list(x = 1, y = 0.51, text = "", 
+      showarrow = F, xref='paper', yref='paper', 
+      xanchor='right', yanchor='auto', xshift=0, yshift=0,
+      font=list(size=12, color="grey"))
+ )
+```
+
+and Door-to-Needle of 94 minutes.
+
+```{r message=FALSE, echo=FALSE}
+url <- 'https://docs.google.com/spreadsheets/d/1uq4sl13vQh7fI0nxRWuCOZezo8xTV0_nt7Ullh1dyrA/edit#gid=1635939701'
+d2n <- gsheet2tbl(url)
+#median(d2n$door_to_needle)
+```
+```{r message=FALSE, echo=FALSE, warning=FALSE}
+p <- plot_ly(d2n, x = ~factor(case), y = ~door_to_needle, alpha = 0.97, size = 7)
+subplot(
+  add_bars(p, color = ~factor(case), colors = colorRampPalette(brewer.pal(21,"Spectral"))(21),  showlegend = F)
+) %>% layout(
+     title = "Door-to-Needle Time (min)<br><sup>Median = 80 min</sup>",
+     yaxis = list(title = "Time (min)",
+     tickfont = list(size = 10)),
+     xaxis = list(title = "Case")
+     ) %>% layout(legend = list(x = 0.87, y = 0.9, traceorder = "normal"
+      )) %>% 
+ layout(annotations = 
+ list(x = 1, y = 0.51, text = "", 
+      showarrow = F, xref='paper', yref='paper', 
+      xanchor='right', yanchor='auto', xshift=0, yshift=0,
+      font=list(size=12, color="grey"))
+ )
+```

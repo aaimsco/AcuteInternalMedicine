@@ -13,7 +13,17 @@ twitter:
 navbar:
   right:
     - text: "Home"
-      href: index.html
+      menu:
+        - text: "What is AIM"
+          href: index.html
+        - text: "Objectives"
+          href: aaim_impact.html
+        - text: "AMU"
+          href: aaim_amu.html
+        - text: "Current Service"
+          href: aaim_status.html
+        - text: "HSAH"
+          href: hsah.html
     - text: "Quick Takes"
       menu:
         - text: "The Onslaught"
