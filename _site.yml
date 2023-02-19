@@ -26,8 +26,8 @@ navbar:
           href: hsah.html
     - text: "AIM Syllabus"
       menu:
-        - text: "Training philosophy"
-          href: syl_philosophy.html
+        - text: "Training Philosophy"
+        - href: syl_philosophy.html
     - text: "Quick Takes"
       menu:
         - text: "The Onslaught"
