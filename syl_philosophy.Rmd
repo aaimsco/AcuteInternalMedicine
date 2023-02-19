@@ -2,7 +2,17 @@
 title: "Training Philosophy"
 description: |
   AIM training programme outline and philosophy
-site: distill::distill_website
+author:
+  - name: Dr Saiful Safuan Md Sani 
+    url: https://saifulsafuan.com
+    affiliation: Advanced Acute Internal Medicine Society Malaysia & Department of Medicine Hospital Kuala Lumpur
+    affiliation_url: https://aaims.co
+date: "`2023-02-19`"
+output: 
+  distill::distill_article:
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
 ---
 
 ```{r message=FALSE, echo=FALSE}
