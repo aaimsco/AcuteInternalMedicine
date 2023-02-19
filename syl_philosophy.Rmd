@@ -1,0 +1,118 @@
+---
+title: "Training Philosophy"
+description: |
+  AIM training programme outline and philosophy
+site: distill::distill_website
+---
+```{r message=FALSE, echo=FALSE}
+library(distill)
+library(plotly)
+library(shiny)
+library(googlesheets)
+library(gsheet)
+library(RColorBrewer)
+library(rmarkdown)
+library(knitr)
+library(kableExtra)
+```
+```{r message=FALSE, echo=FALSE}
+url <- 'https://docs.google.com/spreadsheets/d/1F5hH2qqvEeeoUfgbhtOmP5-PGEE8poyzDrspgxt2LWs/edit?usp=share_link'
+syl <- gsheet2tbl(url)
+```
+
+## Core subject matter competencies
+
+The Acute Internal Medicine Training Programme is a minimum three-year programme that focuses on building a trainee’s capabilities to provide acute clinical care in the hospital setting. Competencies that will be acquired are divided into core subject matter competencies and specialist skills. 
+
+Core subject matter competencies in acute internal medicine within the following fields are mandatory to be covered:
+
+* cardiology
+* respiratory medicine
+* gastroenterology
+* nephrology
+* neurology
+* infectious diseases
+* critical care medicine
+* geriatric medicine
+* diagnostic imaging
+* endocrinology
+* rheumatology.
+
+<br></br>
+
+## Advanced specialist skill
+
+Trainees in Acute Internal Medicine Training Programme are required to develop at least one advanced specialist skill(s). The skill domains are:
+
+* a procedural skill,
+* a defined special interest, 
+* medical education and training, 
+* a research area.
+
+Trainees are allowed to acquire multiple specialist skills from a combination of skill domains or focus on a particular domain. However, the minimum standard is that the trainee must acquire at least ONE specialist skill.
+
+<br></br>
+
+## Educational plan
+
+Every trainee is advised to formulate an educational plan for the whole training programme with an educational supervisor and submitted to the Fellowship Training Board for Advanced Acute Internal Medicine for approval. The plan should include specific interests and skills to be covered in each module, intended exposure and experience to achieve competencies. Competencies to be achieved should be determined clearly. It is emphasised that the importance of quality of learning supersedes volume of patients seen and is reflected by the achievement of competencies regardless of time spent to achieve them. 
+
+In order to achieve optimal learning, the scheduling of an educational plan should be flexible and suited to the mature learner. Modules may run concurrently, for example, diagnostic imaging and cardiology, and research and infectious disease. It is emphasised that the successful completion of a module depends on the achievement of competencies determined for that module in an educational plan. Upon achievement of a specialist skill, the trainee is advised to formulate with the educational supervisor a plan of maintenance of competencies.
+
+<br></br>
+
+## Duration of training
+
+The recommended duration of training in the respective sub-specialities and specialist skill areas of training  which trainees in Acute Internal Medicine will have to undertake is as below:
+
+```{r, results='asis', message=FALSE}
+knitr::kable(syl, caption = "Training modules and duration.", align = "c") %>% 
+  kable_styling(latex_options = "scale_down")
+
+#pander(hosp2019, justify = "center")
+```
+
+The training duration in a particular module may be shortened if the trainee satisfies training requirements as laid out in an educational plan. If a particular module is shorter, the excess time may be added into another module or into advanced specialist skill(s) development, with the approval of the educational supervisor. The total duration of training must be 156 weeks (36 months).
+
+The advanced specialist skill(s) development period is the time when the trainee develops advanced specialist skills in at least one particular domain as mentioned above. This period of training may also include overseas training in a field of interest, community medicine and public health attachment, and/or used for a period of maintenance of acquired procedural skills. This forty-eight weeks period may be spread over the entire duration of training if deemed necessary and appropriate by the Fellowship Training Board.
+
+<br></br>
+
+## Training Centre.
+
+In order that the trainee obtains adequate exposure, only hospitals that have an adequate case mix will be considered to be accredited as a Training Centre. The criteria include:
+
+
+### Workload and Physical structure:
+
+The training hospital must have a daily admission of not less than thirty (30) new unselected cases each day to the General Medical wards.
+
+There should be a minimum of 6 beds which are designated for the care of acutely ill medical patients and these beds must be equipped with appropriate monitoring equipment.
+
+The trainee will need to be involved in the follow-up management of these patients following discharge where applicable.
+
+
+### Trainers & Educational Supervisors:
+
+The trainer must have a minimum of 2 years post-subspecialty gazettement experience or 7 years post-internal medicine gazettement experience in the management of unselected acutely ill medical patients including the management of such patients once their condition has stabilised.
+
+The educational supervisor must be an Acute Internal Medicine physician with at least 2 years post-AIM gazettement experience and will be assigned by the Fellowship Training Board for Acute Internal Medicine. The trainer to trainee ratio is 1:2.
+
+The educational plan must include intended institutions of training in each module.
+
+AIM trainees will be gazetted physicians who would have been privileged and credentialed to perform the procedures covered in this fellowship programme. In selected modules where the trainee has to perform a specified number of procedures or conduct clinic sessions, these procedures and clinic sessions may be arranged over the 3 year period for maintenance of competencies especially in the domain of procedural skills.
+
+<br></br>
+
+## Assessment methods 
+
+During each module: 
+
+* Logbook for core procedures
+* Workplace-based assessment
+* Narrative report by the supervisor
+
+Exit viva is scheduled on completion of full training.
+
+
+

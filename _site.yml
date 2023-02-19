@@ -24,10 +24,10 @@ navbar:
           href: aaim_status.html
         - text: "HSAH"
           href: hsah.html
-        - text: "AIM Syllabus"
-          menu:
-            - text: "cubaan"
-              href: about.html
+    - text: "AIM Syllabus"
+      menu:
+        - text: "Training philosophy"
+          href: syl_philosophy.html
     - text: "Quick Takes"
       menu:
         - text: "The Onslaught"
