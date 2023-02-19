@@ -4,6 +4,7 @@ description: |
   AIM training programme outline and philosophy
 site: distill::distill_website
 ---
+
 ```{r message=FALSE, echo=FALSE}
 library(distill)
 library(googlesheets)
