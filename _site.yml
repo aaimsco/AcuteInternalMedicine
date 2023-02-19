@@ -24,6 +24,8 @@ navbar:
           href: aaim_status.html
         - text: "HSAH"
           href: hsah.html
+        - text: "Training Philosophy"
+          href: syl_philosophy.html
     - text: "Quick Takes"
       menu:
         - text: "The Onslaught"
