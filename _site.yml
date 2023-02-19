@@ -27,7 +27,7 @@ navbar:
     - text: "AIM Syllabus"
       menu:
         - text: "Training philosophy"
-          href: about.html
+          href: syl_philosophy.html
     - text: "Quick Takes"
       menu:
         - text: "The Onslaught"
