@@ -24,10 +24,6 @@ navbar:
           href: aaim_status.html
         - text: "HSAH"
           href: hsah.html
-    - text: "AIM Syllabus"
-      menu:
-        - text: "Training Philosophy"
-        - href: syl_philosophy.html
     - text: "Quick Takes"
       menu:
         - text: "The Onslaught"
@@ -42,6 +38,10 @@ navbar:
           href: reff.html
         - text: "Consensus: Limiting Rx"
           href: cplimit.html  
+    - text: "AIM Syllabus"
+      menu:
+        - text: "Training Philosophy"
+        - href: syl_philosophy.html
     - text: "About"
       href: about.html
     - icon: fab fa-github
