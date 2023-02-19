@@ -95,9 +95,10 @@ Such Clinic is equipped with 1 examination room, with office infrastructure and 
 
 * Objectives:
 
-> To provide immediate safe and high standard of care to medical patients presenting to the emergency department by establishing early accurate diagnosis and initiating early treatment. 
+> To provide immediate safe and high standard of care to medical patients presenting to the emergency department by establishing early accurate diagnosis and initiating early treatment.   
 
 > To improve early patient-centered specialist care, and prevent unnecessary or inappropriate admissions.
+
  
 <br></br>
 
