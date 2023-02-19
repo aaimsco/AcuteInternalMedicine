@@ -41,7 +41,7 @@ navbar:
     - text: "AIM Syllabus"
       menu:
         - text: "Training Philosophy"
-        - href: syl_philosophy.html
+          href: syl_philosophy.html
     - text: "About"
       href: about.html
     - icon: fab fa-github
