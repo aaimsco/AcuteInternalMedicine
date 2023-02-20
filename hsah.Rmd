@@ -5,8 +5,6 @@ description:
 author:
   - name: Dr Zainura Che Isa 
     affiliation: Department of Medicine Hospital Sultan Abdul Halim
-  - name: Dr Saiful Safuan Md Sani
-    affiliation: Department of Medicine Hospital Kuala Lumpur
 date: "`2023-02-17`"
 output: 
   distill::distill_article:
@@ -23,8 +21,7 @@ Hospital Sungai Petani started its operation in 1920 as Rumah Sakit Sungai Petan
      alt="Hospital Sultan Abdul Halim"
      width="100%"
      style="float: left; margin-right: 10px;"/>
-<figcaption>Source: drsaifulsafuan</figcaption>
-
+<figcaption>Source: Google Images</figcaption>
 
 
 Hospital Sultan Abdul Halim thirteen Specialist Services with General Medical Specialist service started in 1974. The Medical Department currently has 216 beds. Admissions averaged 10,000 per year. The hospital caters for a population of 500,000 in Kuala Muda District, 70,000 in Yan District and 70,000 in Sik District (2010 census).
@@ -33,7 +30,7 @@ Hospital Sultan Abdul Halim thirteen Specialist Services with General Medical Sp
      alt="Districts of Kedah"
      width="100%"
      style="float: left; margin-right: 10px;"/>
-<figcaption>Districts of Kedah. Source: drsaifulsafuan</figcaption>
+<figcaption>Districts of Kedah. Source: Google Images</figcaption>
 
 
 
@@ -215,3 +212,11 @@ subplot(
       font=list(size=12, color="grey"))
  )
 ```
+<aside>
+<img src="https://drive.google.com/uc?export=view&id=1_WHqzLSepyagohZWJevw5Uh0ZOYZkoDQ" 
+     alt="ZainuraCheIsa"
+     width="100%"
+     style="float: left; margin-right: 10px;"/>
+<figcaption>Dr Zainura Che Isa is an AIM Physician in a major regional hospital. She likes to spend her spare time reading a good book, especially on self-empowerment. She also cooks simple dishes for family and friends.</figcaption>
+</aside>
+

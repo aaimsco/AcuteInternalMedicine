@@ -29,7 +29,7 @@ Acute internal medicine is a model of care in which patients with acute medical 
 * To be the backbone in the provision of quality specialist care to the general medical patients.
 
 
-## Role of AAIM physician 
+## Role of AIM physician 
 
 * Pre admission: 
   + AIM physician working in M.A.U, Emergency department, Daycare, and specialist clinic
@@ -102,4 +102,16 @@ Such Clinic is equipped with 1 examination room, with office infrastructure and 
  
 <br></br>
 
-*Section authors: Dr Siti Zulfa Zulkifli, Dr Azahirafairud Abdul Rahim & Dr Saiful Safuan Md Sani*
+## Authors {.appendix}
+**Dr Siti Zulfa Zulkifli & Dr Azahirafairud Abdul Rahim**
+<aside>
+<img src="https://drive.google.com/uc?export=view&id=1YaVNAiXsNWhtb0UIGbkPa84nV9a80s8H" 
+     alt="SitiZulfaZulkifli"
+     width="10%"
+     style="float: left; margin-right: 10px;"/>
+<figcaption>Dr Siti Zulfa Zulkifli</figcaption>
+</aside>
+
+## Editor {.appendix}
+Dr Saiful Safuan Md Sani
+
