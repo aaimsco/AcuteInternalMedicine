@@ -1,0 +1,10 @@
+body {
+  background-image: url('https://drive.google.com/drive/folders/1G6U2E66qiiYoVq9ycZWEB_FXb47arWXO');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+div {
+  background-color: rgba(255, 255, 255, 0.35)   /* 35% opaque white */;
+  padding: 0.25em;
+}
