@@ -1,13 +1,13 @@
 {
-    "path" : "~/Documents/COVID/AcuteInternalMedicine",
-    "sortOrder" : [
+    "path": "~/Documents/COVID/AcuteInternalMedicine",
+    "sortOrder": [
         {
-            "ascending" : false,
-            "columnIndex" : 4
+            "columnIndex": 4,
+            "ascending": false
         },
         {
-            "ascending" : false,
-            "columnIndex" : 2
+            "columnIndex": 2,
+            "ascending": false
         }
     ]
 }

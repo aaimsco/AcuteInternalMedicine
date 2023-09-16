@@ -1,0 +1,21 @@
+---
+title: "AIM Services 2023"
+author:
+  - name: Dr Zainura Che Isa 
+output: 
+  distill::distill_article:
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+---
+
+```{r message=FALSE, echo=FALSE, warning=FALSE, include=FALSE}
+library(distill)
+library(knitr)
+```
+
+## AIM Services 2023
+```{r, out.width='87%', fig.align='center', echo=FALSE}
+knitr::include_graphics('/Users/saifulsafuanmdsani/Documents/COVID/AcuteInternalMedicine/aim2023.png')
+
+```
